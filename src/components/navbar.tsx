@@ -60,8 +60,8 @@ function Navbar() {
     const header = document.querySelector("nav");
     if (header != null) {
       window.scrollY > header.offsetTop
-        ? setStickyClass("fixed bg-[#f6dB00] bg-opacity-60 backdrop-blur-sm")
-        : setStickyClass("absolute bg-[#f6dB00]");
+        ? setStickyClass("fixed bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37] bg-opacity-60 backdrop-blur-sm")
+        : setStickyClass("absolute bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37]");
     }
   };
 
@@ -76,8 +76,8 @@ function Navbar() {
   return (
     <nav
       className={`${
-        navOpen ? "fixed bg-[#f6dB00]" : stickyClass
-      } z-50 flex h-[80px] lg:h-[120px] w-full items-center justify-between text-dark-maintext px-4 lg:px-14 font-poppins bg-[#f6dB00]`}
+        navOpen ? "fixed bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37]" : stickyClass
+      } z-50 flex h-[80px] lg:h-[120px] w-full items-center justify-between text-dark-maintext px-4 lg:px-14 font-poppins `}
     >
       <button
         type="button"
@@ -108,92 +108,57 @@ function Navbar() {
       </button>
 
       <Link href="/" className="mx-auto lg:mx-0">
-        <img className={"w-16"} src={"/assets/SPE UI SC.png"} alt="SPE UI SC" />
+        <img className={"w-16"} src={"/assets/SPE_UI_SC.png"} alt="SPE UI SC" />
       </Link>
 
       <div
         className={`${
           navOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
-        }absolute left-0 top-0 h-screen w-[70%] sm:w-[50%] md:w-[40%] bg-[#f6dB00] shadow-lg duration-300 ease-in-out lg:static lg:block lg:h-auto lg:w-auto lg:bg-transparent lg:pt-0 lg:shadow-none`}
+        } absolute left-0 top-0 h-screen w-[70%] sm:w-[50%] md:w-[40%] shadow-lg duration-300 ease-in-out lg:static lg:block lg:h-auto lg:w-auto lg:bg-transparent pt-20 lg:pt-0 lg:shadow-none bg-[#FCCF37]`}
       >
-        <div className="flex flex-col gap-4 px-7 lg:mt-0 lg:flex-row lg:items-end justify-end lg:gap-12 xl:gap-[72px] lg:px-0">
-          <div className="flex flex-col w-min group">
-            <Link
+        <div className="flex flex-col gap-4 px-7 lg:mt-0 lg:flex-row lg:items-center justify-end lg:gap-12 xl:gap-[72px] lg:px-0">
+          <Link
               href="/"
               className={`${
                 active == 0
-                  ? "font-bold bg-blue-900 rounded-md"
-                  : "font-medium px-4 py-2"
+                  ? "font-bold bg-blue-900 rounded-md px-4 py-1"
+                  : "font-medium"
               } text-[16px] lg:text-[20px] group-hover:font-bold truncate text-white`}
             >
               Home
             </Link>
-            <div
-              className={`${
-                active == 0 ? "scale-100" : "scale-0"
-              } h-1 bg-yellow-secondary ease-in-out duration-300`}
-            ></div>
-          </div>
-          <div className="flex flex-col w-min group">
             <Link
               href="/about-us"
               className={`${
-                active == 1 ? "font-bold px-4 py-2" : "font-medium"
+                active == 1 ? "font-bold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
               } text-[16px] lg:text-[20px] group-hover:font-bold truncate text-white`}
             >
               About Us
             </Link>
-            <div
-              className={`${
-                active == 1 ? "scale-100" : "scale-0"
-              } h-1 bg-yellow-secondary ease-in-out duration-300`}
-            ></div>
-          </div>
-          <div className="flex flex-col w-min group">
             <Link
               href="/gallery"
               className={`${
-                active == 2 ? "font-bold" : "font-medium"
+                active == 2 ? "font-bold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
               } text-[16px] lg:text-[20px] group-hover:font-bold truncate text-white`}
             >
               Gallery
             </Link>
-            <div
-              className={`${
-                active == 2 ? "scale-100" : "scale-0"
-              } h-1 bg-yellow-secondary ease-in-out duration-300`}
-            ></div>
-          </div>
-          <div className="flex flex-col w-min group">
             <Link
               href="/petrodays"
               className={`${
-                active == 3 ? "font-bold" : "font-medium"
+                active == 3 ? "font-bold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
               } text-[16px] lg:text-[20px] group-hover:font-bold truncate text-white`}
             >
               Petrodays Competition
             </Link>
-            <div
-              className={`${
-                active == 3 ? "scale-100" : "scale-0"
-              } h-1 bg-yellow-secondary ease-in-out duration-300`}
-            ></div>
-          </div>
-          <div className="flex flex-col w-min group lg:hidden">
             <Link
               href="/membership"
               className={`${
-                active == 4 ? "font-bold" : "font-medium"
+                active == 4 ? "font-bold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
               } text-[16px] lg:text-[20px] group-hover:font-bold truncate`}
             >
               Membership
             </Link>
-            <div
-              className={`${
-                active == 4 ? "scale-100" : "scale-0"
-              } h-1 bg-yellow-secondary ease-in-out duration-300`}
-            ></div>
-          </div>
         </div>
       </div>
     </nav>
