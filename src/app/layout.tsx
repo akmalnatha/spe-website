@@ -17,7 +17,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "SPE UI SC",
   description: "SPE Organization Website",
-  icons: "./assets/SPE UI SC.png",
+  icons: "./assets/SPE_UI_SC.png",
 };
 
 export default function RootLayout({

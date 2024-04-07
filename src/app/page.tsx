@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
+import Slider from "@/components/slider";
 
 export default function Home() {
   return (
-    <main className="w-full h-auto lg:min-h-[874px] bg-white relative overflow-hidden">
+    <main className="w-full h-full bg-white relative overflow-hidden pb-32">
       <div className="flex flex-row">
         <div className="flex flex-col w-1/2 pt-64 pl-16">
           <h1 className="text-6xl text-[#1F3576] font-bold text-poppins">
@@ -21,21 +21,30 @@ export default function Home() {
           <div className="flex flex-row mt-8 gap-4">
             <Link
               href="/membership"
-              className="bg-[#f6dB00] rounded-2xl px-4 py-2"
+              className="bg-[#f6dB00] rounded-2xl px-4 py-2 hover:shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)]"
             >
-              <p className="text-xl text-white">Join Us</p>
+              <p className="text-xl text-white font-semibold">Join Us</p>
             </Link>
             <Link
               href="/about-us"
-              className="border border-[#f6dB00] rounded-2xl px-4 py-2"
+              className="border border-[#f6dB00] rounded-2xl px-4 py-2 hover:shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)]"
             >
-              <p className="text-xl text-[#1F3576]">Know More</p>
+              <p className="text-xl text-[#1F3576] font-semibold">Know More</p>
             </Link>
           </div>
         </div>
 
-        <div className="flex items-end justify-end w-1/2">
-          <img src="./assets/home1.png" className="h-screen" />
+        <div className="flex items-end justify-end pt-28 w-1/2">
+          <img src="./assets/home1.png" className="w-4/5 h-[84vh] rounded-lg" />
+        </div>
+      </div>
+
+      <div className="flex flex-col bg-white mt-24">
+        <h1 className="text-6xl text-[#1F3576] font-bold text-poppins mx-auto">
+          What Do They Say?
+        </h1>
+        <div className="flex flex-row mt-14">
+          <Slider />
         </div>
       </div>
     </main>
