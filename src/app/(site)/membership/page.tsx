@@ -1,4 +1,7 @@
-export default function Membership()
-{
-    
+export default function Membership() {
+    return(
+        <div>
+            
+        </div>
+    );
 }

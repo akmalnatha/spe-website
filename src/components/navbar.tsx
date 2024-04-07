@@ -122,7 +122,7 @@ function Navbar() {
           navOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         } absolute left-0 top-0 h-screen w-[70%] sm:w-[50%] md:w-[40%] shadow-lg duration-300 ease-in-out lg:static lg:block lg:h-auto lg:w-auto lg:bg-transparent pt-20 lg:pt-0 lg:shadow-none bg-[#FCCF37]`}
       >
-        <div className="flex flex-col gap-4 px-7 lg:mt-0 lg:flex-row lg:items-center justify-end lg:gap-12 xl:gap-[72px] lg:px-0 relative">
+        <div className="flex flex-col gap-4 px-7 lg:mt-0 lg:flex-row lg:items-center justify-end lg:gap-6 xl:gap-[62px] lg:px-0 relative">
           <Link
             href="/"
             className={`${
