@@ -93,7 +93,7 @@ export default function Membership() {
                   Skill Upgrade
                 </h3>
                 <p className="font-poppins text-[14px] md:text-[16px] lg:text-[20px] text-justify">
-                  Acquire career-advancing skills through SPE's work programs.
+                  Acquire career-advancing skills through SPE&apos;s work programs.
                 </p>
               </div>
             </div>

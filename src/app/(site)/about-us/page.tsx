@@ -69,11 +69,12 @@ export default function AboutUs() {
           className="absolute -bottom-[72px]"
         />
       </div>
-      <MarqueeComponent 
-      children={[
+      <MarqueeComponent>
         <h1 className="px-5 text-yellow-400 font-lato italic">SPE UI SC - Outstand Beyond Ordinary</h1>
-      ]}
-      />
+        <h1 className="px-5 text-yellow-400 font-lato italic">SPE UI SC - Outstand Beyond Ordinary</h1>
+        <h1 className="px-5 text-yellow-400 font-lato italic">SPE UI SC - Outstand Beyond Ordinary</h1>
+        <h1 className="px-5 text-yellow-400 font-lato italic">SPE UI SC - Outstand Beyond Ordinary</h1>
+      </MarqueeComponent>
       <div className="bg-[#FFF6EF] pt-5 pb-10">
         <h2 className="text-[48px] drop-shadow-xl shadow-black text-[#1F3576] font-poppin font-bold text-center">
           Who We Are
