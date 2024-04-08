@@ -20,7 +20,7 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
           key={idx}
           className={`${
             idx === activeImage
-              ? "block w-full h-full md:h-[80vh] py-20 md:px-20 px-10 text-left"
+              ? "block w-full h-full md:h-[80vh] py-8 lg:py-20 px-10 text-left"
               : "hidden"
           }`}
         >
@@ -40,23 +40,25 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
             }}
             className="w-full"
           >
-            <div className="text-3xl font-extrabold">{elem.title}</div>
-            <div className="leading-relaxed font-medium text-base tracking-wide h-60 md:h-40 italic text-black mt-6">
+            <div className="md:text-xl lg:text-3xl font-bold lg:font-extrabold">
+              {elem.title}
+            </div>
+            <div className="leading-relaxed font-medium text-[11px] md:text-[12px] lg:text-base tracking-wide h-60 md:h-40 italic text-black mt-4 lg:mt-6">
               {" "}
               {elem.desc}
             </div>
           </motion.div>
 
-          <div className="absolute md:bottom-1 bottom-10 right-10 md:right-0 w-full flex justify-center items-center">
+          <div className="absolute md:bottom-1 bottom-10 right-4 md:right-0 w-full flex justify-center items-center">
             <div
-              className="absolute bottom-4 right-12 cursor-pointer text-[24px]"
+              className="absolute right-6 md:bottom-4 md:right-12 cursor-pointer text-[24px]"
               onClick={clickPrev}
             >
               <FaAngleLeft />
             </div>
 
             <div
-              className="absolute bottom-4 right-6 cursor-pointer text-[24px]"
+              className="absolute right-0 md:bottom-4 md:right-6 cursor-pointer text-[24px]"
               onClick={clickNext}
             >
               <FaAngleRight />

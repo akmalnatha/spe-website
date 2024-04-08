@@ -15,7 +15,7 @@ export const images = [
     id: 3,
     src: "/assets/yemima.png",
     title: "Yemima Elsaria",
-    desc: "I joined the soft-skill development event (Skill Finder) of SPE UI SC 2023 that collaborates with SLB Indonesia and their offline recruitment program in Kampus UI, Depok. The event was held for 2 days, the first one was Inspire The Future Talkshow with Veera Lakhsmi (HR representative) and Scott Cremin (Managing Director of SLB Indonesia), and the second one was the offline recruitment session at University of Indonesia. The recruitment process consisted of 4 stages starting from Aptitude Test, 3 Minutes Interview, Focus Group Discussion, and last one was HR Interview.",
+    desc: "I joined the soft-skill development event (Skill Finder) of SPE UI SC 2023 that collaborates with SLB Indonesia and their offline recruitment program in Kampus UI, Depok. The event was held for 2 days, the first one was Inspire The Future Talkshow with Veera Lakhsmi (HR representative) and Scott Cremin (Managing Director of SLB Indonesia), and the second one was the offline recruitment session at University of Indonesia.",
   },
   {
     id: 4,
