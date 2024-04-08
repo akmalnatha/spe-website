@@ -6,7 +6,7 @@ export default function Home() {
     <main className="w-full h-auto lg:min-h-[874px] bg-white relative overflow-hidden">
       <div className="flex flex-row">
         <div className="flex flex-col w-1/2 pt-64 pl-16">
-          <h1 className="text-6xl text-[#1F3576] font-bold text-poppins">
+          <h1 className="text-6xl text-[#1F3576] font-bold font-poppins">
             Society of Petroleum Engineers
           </h1>
           <h2 className="text-4xl text-[#1F3576] mt-2 font-semibold">

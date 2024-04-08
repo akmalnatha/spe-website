@@ -13,7 +13,7 @@ export default function gallery() {
   return (
     <div className="flex flex-col bg-white  relative h h-full w-full pt-48 pb-12 px-6">
       <h1
-        className="text-6xl text-[#1F3576] font-bold text-poppins mx-auto"
+        className="text-6xl text-[#1F3576] font-bold font-poppins mx-auto"
         data-aos="fade-down"
       >
         SPE UI GALLERY

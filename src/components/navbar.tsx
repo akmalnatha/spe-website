@@ -8,7 +8,7 @@ import { MdOutlinePersonOutline } from "react-icons/md";
 
 function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
-  const [stickyClass, setStickyClass] = useState("absolute bg-[#f6dB00]");
+  const [stickyClass, setStickyClass] = useState("absolute bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37]");
   const [isAccount, setAccount] = useState(false);
   const location = usePathname();
   const [active, setActive] = useState(0);
@@ -77,11 +77,11 @@ function Navbar() {
     <nav
       className={`${
         navOpen ? "fixed bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37]" : stickyClass
-      } z-50 flex h-[80px] lg:h-[120px] w-full items-center justify-between text-dark-maintext px-4 lg:px-14 font-poppins `}
+      } z-50 flex h-[72px] w-full items-center justify-between text-dark-maintext px-4 lg:px-14 font-poppins `}
     >
       <button
         type="button"
-        className={`hamburger absolute z-10 h-[40px] w-[40px] cursor-pointer lg:hidden`}
+        className={`hamburger absolute z-[49] h-[40px] w-[40px] cursor-pointer lg:hidden`}
         onClick={() => setNavOpen(!navOpen)}
       >
         <span
@@ -113,49 +113,49 @@ function Navbar() {
 
       <div
         className={`${
-          navOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
-        } absolute left-0 top-0 h-screen w-[70%] sm:w-[50%] md:w-[40%] shadow-lg duration-300 ease-in-out lg:static lg:block lg:h-auto lg:w-auto lg:bg-transparent pt-20 lg:pt-0 lg:shadow-none bg-[#FCCF37]`}
+          navOpen ? "top-[72px] lg:top-0 max-h-[250px] lg:max-h-full pb-5 lg:pb-0" : "lg:block top-[72px] max-h-0 lg:max-h-full lg:top-0"
+        } absolute left-0 h-fit w-full shadow-lg duration-700 ease-in-out lg:static lg:block lg:h-auto lg:w-auto lg:shadow-none bg-[#FCCF37] lg:bg-transparent z-[48] overflow-hidden`}
       >
         <div className="flex flex-col gap-4 px-7 lg:mt-0 lg:flex-row lg:items-center justify-end lg:gap-12 xl:gap-[72px] lg:px-0">
           <Link
               href="/"
               className={`${
                 active == 0
-                  ? "font-bold bg-blue-900 rounded-md px-4 py-1"
+                  ? "font-semibold bg-blue-900 rounded-md px-4 py-1"
                   : "font-medium"
-              } text-[16px] lg:text-[20px] group-hover:font-bold truncate text-white`}
+              } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
             >
               Home
             </Link>
             <Link
               href="/about-us"
               className={`${
-                active == 1 ? "font-bold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
-              } text-[16px] lg:text-[20px] group-hover:font-bold truncate text-white`}
+                active == 1 ? "font-semibold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
+              } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
             >
               About Us
             </Link>
             <Link
               href="/gallery"
               className={`${
-                active == 2 ? "font-bold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
-              } text-[16px] lg:text-[20px] group-hover:font-bold truncate text-white`}
+                active == 2 ? "font-semibold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
+              } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
             >
               Gallery
             </Link>
             <Link
               href="/petrodays"
               className={`${
-                active == 3 ? "font-bold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
-              } text-[16px] lg:text-[20px] group-hover:font-bold truncate text-white`}
+                active == 3 ? "font-semibold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
+              } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
             >
               Petrodays Competition
             </Link>
             <Link
               href="/membership"
               className={`${
-                active == 4 ? "font-bold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
-              } text-[16px] lg:text-[20px] group-hover:font-bold truncate`}
+                active == 4 ? "font-semibold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
+              } text-[14px] lg:text-[18px] hover:font-semibold truncate`}
             >
               Membership
             </Link>
