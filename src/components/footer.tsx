@@ -27,10 +27,10 @@ function Footer() {
                 Kampus Baru UI, Depok, West Java - 16424
               </p>
             </div>
-            <div className="flex gap-3 text-[32px] items-center">              
-                <FaInstagram />
-                <FaLinkedin />
-                <p className="text-[20px]">#OutstandBeyondOrdinary</p>
+            <div className="flex gap-3 text-[32px] items-center">
+              <FaInstagram />
+              <FaLinkedin />
+              <p className="text-[20px]">#OutstandBeyondOrdinary</p>
             </div>
           </div>
         </div>

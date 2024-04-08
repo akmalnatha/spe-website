@@ -60,8 +60,12 @@ function Navbar() {
     const header = document.querySelector("nav");
     if (header != null) {
       window.scrollY > header.offsetTop
-        ? setStickyClass("fixed bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37] bg-opacity-60 backdrop-blur-sm")
-        : setStickyClass("absolute bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37]");
+        ? setStickyClass(
+            "fixed bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37] bg-opacity-60 backdrop-blur-sm"
+          )
+        : setStickyClass(
+            "absolute bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37]"
+          );
     }
   };
 
@@ -116,7 +120,7 @@ function Navbar() {
           navOpen ? "top-[72px] lg:top-0 max-h-[250px] lg:max-h-full pb-5 lg:pb-0" : "lg:block top-[72px] max-h-0 lg:max-h-full lg:top-0"
         } absolute left-0 h-fit w-full shadow-lg duration-700 ease-in-out lg:static lg:block lg:h-auto lg:w-auto lg:shadow-none bg-[#FCCF37] lg:bg-transparent z-[48] overflow-hidden`}
       >
-        <div className="flex flex-col gap-4 px-7 lg:mt-0 lg:flex-row lg:items-center justify-end lg:gap-12 xl:gap-[72px] lg:px-0">
+        <div className="flex flex-col gap-4 px-7 lg:mt-0 lg:flex-row lg:items-center justify-end lg:gap-6 xl:gap-[62px] lg:px-0 relative">
           <Link
               href="/"
               className={`${
