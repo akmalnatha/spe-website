@@ -22,40 +22,40 @@ export default function Gallery() {
         className="flex flex-col md:flex-row gap-4 mt-12"
         data-aos="fade-right"
       >
-        <ImageBox url={"/gallery/rectangle 803-min.png"} />
-        <ImageBox url={"/gallery/rectangle 804-min.png"} />
-        <ImageBox url={"/gallery/rectangle 805-min.png"} />
+        <ImageBox url={"/gallery/rectangle 803.svg"} />
+        <ImageBox url={"/gallery/rectangle 804.svg"} />
+        <ImageBox url={"/gallery/rectangle 805.svg"} />
       </div>
       <div
         className="flex flex-col md:flex-row gap-4 mt-12"
         data-aos="fade-left"
       >
-        <ImageBox url={"/gallery/rectangle 806-min.png"} />
-        <ImageBox url={"/gallery/rectangle 807-min.png"} />
-        <ImageBox url={"/gallery/rectangle 808-min.png"} />
+        <ImageBox url={"/gallery/rectangle 806.svg"} />
+        <ImageBox url={"/gallery/rectangle 807.svg"} />
+        <ImageBox url={"/gallery/rectangle 808.svg"} />
       </div>
       <div
         className="flex flex-col md:flex-row gap-4 mt-12"
         data-aos="fade-right"
       >
-        <ImageBox url={"/gallery/rectangle 809-min.png"} />
-        <ImageBox url={"/gallery/rectangle 810-min.png"} />
-        <ImageBox url={"/gallery/IMG_8909 1-min.png"} />
+        <ImageBox url={"/gallery/rectangle 809.svg"} />
+        <ImageBox url={"/gallery/rectangle 810.svg"} />
+        <ImageBox url={"/gallery/IMG_8909 1.svg"} />
       </div>
       <div
         className="flex flex-col md:flex-row gap-4 mt-12"
         data-aos="fade-left"
       >
-        <ImageBox url={"/gallery/Screenshot (550) 1-min.png"} />
-        <ImageBox url={"/gallery/image 134-min.png"} />
-        <ImageBox url={"/gallery/image 135-min.png"} />
+        <ImageBox url={"/gallery/Screenshot (550) 1.svg"} />
+        <ImageBox url={"/gallery/image 134.svg"} />
+        <ImageBox url={"/gallery/image 135.svg"} />
       </div>
       <div
         className="flex flex-col md:flex-row gap-4 mt-12"
         data-aos="fade-right"
       >
-        <ImageBox url={"/gallery/image 136-min.png"} />
-        <ImageBox url={"/gallery/IMG_4279 1-min.png"} />
+        <ImageBox url={"/gallery/image 136.svg"} />
+        <ImageBox url={"/gallery/IMG_4279 1.svg"} />
       </div>
     </div>
   );
