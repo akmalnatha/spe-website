@@ -85,45 +85,49 @@ function Navbar() {
         navOpen
           ? "fixed bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37]"
           : stickyClass
-      } z-50 flex h-[72px] w-full items-center justify-between text-dark-maintext px-4 lg:px-14 font-poppins `}
+      } z-50 flex h-[56px] lg:h-[72px] w-full items-center justify-between text-dark-maintext px-4 lg:px-14 font-poppins `}
     >
       <button
         type="button"
-        className={`hamburger absolute z-[49] h-[40px] w-[40px] cursor-pointer lg:hidden`}
+        className={`hamburger absolute z-[49] h-[28px] w-[36px] cursor-pointer lg:hidden`}
         onClick={() => setNavOpen(!navOpen)}
       >
         <span
           className={`${
             navOpen
-              ? "top-[1.2em] h-[2px] rotate-[135deg] transition"
-              : "top-[0.7em] h-[3px]"
+              ? "top-[0.8em] h-[2px] rotate-[135deg] transition"
+              : "top-[0.3em] h-[3px]"
           } hamburger line absolute left-0 right-0 mx-auto h-[3px] w-[20px] rounded-xl bg-black duration-300 ease-in-out`}
         ></span>
         <span
           id="span2"
           className={`${
-            navOpen ? "h-[2px] scale-0 transition" : "top-[1.2em] h-[3px]"
+            navOpen ? "h-[2px] scale-0 transition" : "top-[0.8em] h-[3px]"
           } hamburger line absolute left-0 right-0 mx-auto h-[3px] w-[20px] rounded-xl bg-black duration-300 ease-in-out`}
         ></span>
         <span
           id="span3"
           className={`${
             navOpen
-              ? "top-[1.2em] h-[2px] rotate-45 transition"
-              : "top-[1.7em] h-[3px]"
+              ? "top-[0.8em] h-[2px] rotate-45 transition"
+              : "top-[1.3em] h-[3px]"
           } hamburger line absolute left-0 right-0 mx-auto h-[3px] w-[20px] rounded-xl bg-black duration-300 ease-in-out`}
         ></span>
       </button>
 
       <Link href="/" className="mx-auto lg:mx-0">
-        <img className={"w-16"} src={"/assets/SPE_UI_SC.png"} alt="SPE UI SC" />
+        <img
+          className={"w-14 lg:w-16"}
+          src={"/assets/SPE_UI_SC.png"}
+          alt="SPE UI SC"
+        />
       </Link>
 
       <div
         className={`${
           navOpen
-            ? "top-[72px] lg:top-0 max-h-[250px] lg:max-h-full pb-5 lg:pb-0"
-            : "lg:block top-[72px] max-h-0 lg:max-h-full lg:top-0"
+            ? "top-[56px] lg:top-0 max-h-[250px] lg:max-h-full pb-5 lg:pb-0"
+            : "lg:block top-[56px] max-h-0 lg:max-h-full lg:top-0"
         } absolute left-0 h-fit w-full shadow-lg duration-700 ease-in-out lg:static lg:block lg:h-auto lg:w-auto lg:shadow-none bg-[#FCCF37] lg:bg-transparent z-[48] overflow-hidden`}
       >
         <div className="flex flex-col gap-4 px-7 lg:mt-0 lg:flex-row lg:items-center justify-end lg:gap-6 xl:gap-[62px] lg:px-0 relative">

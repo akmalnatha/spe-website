@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import { League_Spartan } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { Poppins } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -27,6 +28,13 @@ const leagueSpartan = League_Spartan({
   display: "swap",
   variable: "--font-league-spartan",
   weight: ["100", "300", "400", "500", "600", "700"],
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-plus-jakarta-sans",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
