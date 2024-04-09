@@ -11,20 +11,20 @@ export default function Membership() {
   });
   return (
     <>
-      <div className="w-full h-auto lg:min-h-[874px] bg-white relative overflow-hidden">
+      <div className="w-full h-auto  bg-white relative overflow-hidden">
         <img
           src="/assets/image copy.png"
-          className="absolute my-auto top-[80px] lg:top-[120px] bottom-0 h-full w-full"
+          className="absolute my-auto top-0 h-screen w-full"
         />
-        <div className="bg-white bg-opacity-35 backdrop-blur-md w-[60%] md:w-1/2 h-[126vh] pt-[110px] lg:pt-[208px] pb-[96px] lg:pb-[180px] px-[7.5%] lg:px-[92px] border-[1px] border-white">
+        <div className="bg-white bg-opacity-35 backdrop-blur-md w-[60%] md:w-1/2 h-screen pt-[110px] lg:pt-[120px] pb-[96px] lg:pb-[180px] px-[7.5%] lg:px-[92px] border-[1px] border-white" data-aos="fade-right">
           <h1
-            className="text-black font-bold text-[24px] md:text-[40px] lg:text-[56px]"
+            className="text-black font-bold text-[22px] md:text-[32px] lg:text-[48px] xl:text-[56px]"
             data-aos="fade-down"
           >
             SPE UI SC 2024
           </h1>
           <p
-            className="text-black font-poppins text-[12px] md:text-[16px] lg:text-[20px] md:text-justify mt-6 lg:mt-8"
+            className="text-black font-poppins text-[11px] lg:text-[17px] xl:text-[20px] md:text-justify mt-6 lg:mt-8"
             data-aos="fade-right"
           >
             SPE as the{" "}
@@ -35,7 +35,7 @@ export default function Membership() {
             skills needed to solve the impending energy challenges
           </p>
           <p
-            className="text-black font-poppins text-[12px] md:text-[16px] lg:text-[20px] md:text-justify mt-6 lg:mt-8"
+            className="text-black font-poppins text-[11px] md:text-[13 px] lg:text-[17px] xl:text-[20px] md:text-justify mt-6 lg:mt-8"
             data-aos="fade-left"
           >
             Becoming an SPE member will provide you with many opportunities to{" "}
@@ -45,12 +45,12 @@ export default function Membership() {
             through our work programs.
           </p>
           <div
-            className="flex flex-col lg:flex-row mt-10 gap-2 md:gap-4"
+            className="flex flex-col lg:flex-row mt-6 md:mt-10 gap-2 md:gap-4"
             data-aos="fade-up"
           >
             <Link
               href={"https://bit.ly/JoinSPE2024"}
-              className="flex flex-row w-fit justify-center items-center gap-4 bg-sky-950 px-4 py-2 md:px-6 md:py-2 rounded-full text-[14px] md:text-[16px] lg:text-[20px] text-white font-semibold"
+              className="flex flex-row w-fit justify-center items-center gap-4 bg-sky-950 px-4 py-2 md:px-6 md:py-2 rounded-full text-[10px] md:text-[16px] lg:text-[20px] text-white font-semibold"
             >
               Register
               <FaExternalLinkAlt />
@@ -58,7 +58,7 @@ export default function Membership() {
 
             <Link
               href={"https://bit.ly/SPEUISC2024MembershipGuidebook"}
-              className="flex flex-row w-fit justify-center items-center gap-4 bg-sky-950 px-4 py-2 md:px-6 md:py-2 rounded-full text-[14px] md:text-[16px] lg:text-[20px] text-white font-semibold"
+              className="flex flex-row w-fit justify-center items-center gap-4 bg-sky-950 px-4 py-2 md:px-6 md:py-2 rounded-full text-[10px] md:text-[16px] lg:text-[20px] text-white font-semibold"
             >
               Guidebook
               <FaExternalLinkAlt />
@@ -67,7 +67,7 @@ export default function Membership() {
         </div>
       </div>
 
-      <div className="w-full bg-white text-black pt-[36px] lg:pt-[88px] pb-[44px] lg:pb-[100px] px-[6.805%] lg:px-[98px] relative overflow-hidden">
+      <div className="w-full bg-white text-black pt-[36px] lg:pt-[72px] pb-[44px] lg:pb-[100px] px-[6.805%] lg:px-[98px] relative overflow-hidden">
         <h1
           className="font-bold text-[32px] md:text-[40px] lg:text-[56px]"
           data-aos="fade-down"
