@@ -22,24 +22,24 @@ export default function Gallery() {
         className="flex flex-col md:flex-row gap-4 mt-12"
         data-aos="fade-right"
       >
-        <ImageBox url={"/gallery/rectangle 803.svg"} />
-        <ImageBox url={"/gallery/rectangle 804.svg"} />
-        <ImageBox url={"/gallery/rectangle 805.svg"} />
+        <ImageBox url={"/gallery/image 1.svg"} />
+        <ImageBox url={"/gallery/image 2.svg"} />
+        <ImageBox url={"/gallery/image 3.svg"} />
       </div>
       <div
         className="flex flex-col md:flex-row gap-4 mt-12"
         data-aos="fade-left"
       >
-        <ImageBox url={"/gallery/rectangle 806.svg"} />
-        <ImageBox url={"/gallery/rectangle 807.svg"} />
-        <ImageBox url={"/gallery/rectangle 808.svg"} />
+        <ImageBox url={"/gallery/image 4.svg"} />
+        <ImageBox url={"/gallery/image 5.svg"} />
+        <ImageBox url={"/gallery/image 6.svg"} />
       </div>
       <div
         className="flex flex-col md:flex-row gap-4 mt-12"
         data-aos="fade-right"
       >
-        <ImageBox url={"/gallery/rectangle 809.svg"} />
-        <ImageBox url={"/gallery/rectangle 810.svg"} />
+        <ImageBox url={"/gallery/image 7.svg"} />
+        <ImageBox url={"/gallery/image 8.svg"} />
         <ImageBox url={"/gallery/IMG_8909 1.svg"} />
       </div>
       <div
