@@ -11,12 +11,12 @@ export default function Membership() {
   });
   return (
     <>
-      <div className="w-full h-auto  bg-white relative overflow-hidden">
+      <div className="w-full h-auto bg-white relative overflow-hidden">
         <img
           src="/assets/image copy.png"
-          className="absolute my-auto top-0 h-screen w-full"
+          className="absolute my-auto top-0 h-full md:h-screen w-full"
         />
-        <div className="bg-white bg-opacity-35 backdrop-blur-md w-[60%] md:w-1/2 h-screen pt-[110px] lg:pt-[120px] pb-[96px] lg:pb-[180px] px-[7.5%] lg:px-[92px] border-[1px] border-white" data-aos="fade-right">
+        <div className="bg-white bg-opacity-35 backdrop-blur-md w-[60%] md:w-1/2 h-[60%] md:h-screen pt-[110px] lg:pt-[120px] pb-[96px] lg:pb-[180px] px-[7.5%] lg:px-[92px] border-[1px] border-white" data-aos="fade-right">
           <h1
             className="text-black font-bold text-[22px] md:text-[32px] lg:text-[48px] xl:text-[56px]"
             data-aos="fade-down"
@@ -36,7 +36,7 @@ export default function Membership() {
           </p>
           <p
             className="text-black font-poppins text-[11px] md:text-[13 px] lg:text-[17px] xl:text-[20px] md:text-justify mt-6 lg:mt-8"
-            data-aos="fade-left"
+            data-aos="fade-right"
           >
             Becoming an SPE member will provide you with many opportunities to{" "}
             <span className="font-bold">network with other </span> student
