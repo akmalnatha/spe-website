@@ -16,7 +16,10 @@ export default function Membership() {
           src="/assets/image copy.png"
           className="absolute my-auto top-0 h-full md:h-screen w-full"
         />
-        <div className="bg-white bg-opacity-35 backdrop-blur-md w-[60%] md:w-1/2 h-[60%] md:h-screen pt-[110px] lg:pt-[120px] pb-[96px] lg:pb-[180px] px-[7.5%] lg:px-[92px] border-[1px] border-white" data-aos="fade-right">
+        <div
+          className="bg-white bg-opacity-35 backdrop-blur-md w-[60%] md:w-1/2 h-[60%] md:h-screen pt-[110px] lg:pt-[120px] pb-[96px] lg:pb-[180px] px-[7.5%] lg:px-[92px] border-[1px] border-white"
+          data-aos="fade-right"
+        >
           <h1
             className="text-black font-bold text-[22px] md:text-[32px] lg:text-[48px] xl:text-[56px]"
             data-aos="fade-down"
@@ -68,17 +71,11 @@ export default function Membership() {
       </div>
 
       <div className="w-full bg-white text-black pt-[36px] lg:pt-[72px] pb-[44px] lg:pb-[100px] px-[6.805%] lg:px-[98px] relative overflow-hidden">
-        <h1
-          className="font-bold text-[32px] md:text-[40px] lg:text-[56px]"
-          data-aos="fade-down"
-        >
+        <h1 className="font-bold text-[32px] md:text-[40px] lg:text-[56px]">
           What Will You Get as Our Member?
         </h1>
         <div className="w-4/5">
-          <div
-            className="flex flex-col gap-9 mt-8 lg:mt-10"
-            data-aos="fade-right"
-          >
+          <div className="flex flex-col gap-9 mt-8 lg:mt-10">
             <div className="flex gap-6">
               <div className="flex items-center px-5 lg:px-10 border-r-8 border-[#FCCF37] font-poppins font-semibold text-[24px] md:text-[36px] lg:text-[48px]">
                 {" "}
