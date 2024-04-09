@@ -17,6 +17,7 @@ const config: Config = {
         poppins: ["var(--font-poppins)"],
         leagueSpartan: ["var(--font-league-spartan)"],
         lato: ["var(--font-lato)"],
+        plusJakartaSans: ["var(--font-plus-jakarta-sans)"],
       },
     },
   },

@@ -35,9 +35,6 @@ function Slides({ className }: SlidesProp) {
     const interval = setInterval(() => {
       const idx = matches ? 1 : 2;
       setIndex((oldIndex) => {
-        console.log(matches)
-          console.log(oldIndex)
-          console.log(idx)
         if (oldIndex < idx) {
           return oldIndex + 1;
         } else {
@@ -68,7 +65,7 @@ function Slides({ className }: SlidesProp) {
         className="absolute flex items-center duration-1000 slides"
         style={styleSlide.container(matches)}
       >
-        <SlideItem type="resilient" active={index === -1} />
+        <SlideItem type="resilient" active={index === -1} className="drop-shadow"/>
         <SlideItem type="escalate" active={index === 0} />
         <SlideItem type="comprehensive" active={index === 1} />
       </div>
