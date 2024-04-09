@@ -40,7 +40,7 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
             }}
             className="w-full"
           >
-            <div className="md:text-xl lg:text-3xl font-bold lg:font-extrabold">
+            <div className="md:text-xl lg:text-3xl font-bold lg:font-extrabold text-black">
               {elem.title}
             </div>
             <div className="leading-relaxed font-medium text-[11px] md:text-[12px] lg:text-base tracking-wide h-60 md:h-40 italic text-black mt-4 lg:mt-6">
@@ -51,14 +51,14 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
 
           <div className="absolute md:bottom-1 bottom-10 right-4 md:right-0 w-full flex justify-center items-center">
             <div
-              className="absolute right-6 md:bottom-4 md:right-12 cursor-pointer text-[24px]"
+              className="absolute right-6 md:bottom-4 md:right-12 cursor-pointer text-[24px] text-black"
               onClick={clickPrev}
             >
               <FaAngleLeft />
             </div>
 
             <div
-              className="absolute right-0 md:bottom-4 md:right-6 cursor-pointer text-[24px]"
+              className="absolute right-0 md:bottom-4 md:right-6 cursor-pointer text-[24px] text-black"
               onClick={clickNext}
             >
               <FaAngleRight />

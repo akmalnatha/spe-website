@@ -8,7 +8,9 @@ import { MdOutlinePersonOutline } from "react-icons/md";
 
 function Navbar() {
   const [navOpen, setNavOpen] = useState(false);
-  const [stickyClass, setStickyClass] = useState("absolute bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37]");
+  const [stickyClass, setStickyClass] = useState(
+    "absolute bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37]"
+  );
   const [isAccount, setAccount] = useState(false);
   const location = usePathname();
   const [active, setActive] = useState(0);
@@ -80,7 +82,9 @@ function Navbar() {
   return (
     <nav
       className={`${
-        navOpen ? "fixed bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37]" : stickyClass
+        navOpen
+          ? "fixed bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37]"
+          : stickyClass
       } z-50 flex h-[72px] w-full items-center justify-between text-dark-maintext px-4 lg:px-14 font-poppins `}
     >
       <button
@@ -117,52 +121,62 @@ function Navbar() {
 
       <div
         className={`${
-          navOpen ? "top-[72px] lg:top-0 max-h-[250px] lg:max-h-full pb-5 lg:pb-0" : "lg:block top-[72px] max-h-0 lg:max-h-full lg:top-0"
+          navOpen
+            ? "top-[72px] lg:top-0 max-h-[250px] lg:max-h-full pb-5 lg:pb-0"
+            : "lg:block top-[72px] max-h-0 lg:max-h-full lg:top-0"
         } absolute left-0 h-fit w-full shadow-lg duration-700 ease-in-out lg:static lg:block lg:h-auto lg:w-auto lg:shadow-none bg-[#FCCF37] lg:bg-transparent z-[48] overflow-hidden`}
       >
         <div className="flex flex-col gap-4 px-7 lg:mt-0 lg:flex-row lg:items-center justify-end lg:gap-6 xl:gap-[62px] lg:px-0 relative">
           <Link
-              href="/"
-              className={`${
-                active == 0
-                  ? "font-semibold bg-blue-900 rounded-md px-4 py-1"
-                  : "font-medium"
-              } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about-us"
-              className={`${
-                active == 1 ? "font-semibold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
-              } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
-            >
-              About Us
-            </Link>
-            <Link
-              href="/gallery"
-              className={`${
-                active == 2 ? "font-semibold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
-              } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
-            >
-              Gallery
-            </Link>
-            <Link
-              href="/petrodays"
-              className={`${
-                active == 3 ? "font-semibold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
-              } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
-            >
-              Petrodays Competition
-            </Link>
-            <Link
-              href="/membership"
-              className={`${
-                active == 4 ? "font-semibold bg-blue-900 rounded-md px-4 py-1" : "font-medium"
-              } text-[14px] lg:text-[18px] hover:font-semibold truncate`}
-            >
-              Membership
-            </Link>
+            href="/"
+            className={`${
+              active == 0
+                ? "font-semibold bg-blue-900 rounded-md px-4 py-1"
+                : "font-medium"
+            } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
+          >
+            Home
+          </Link>
+          <Link
+            href="/about-us"
+            className={`${
+              active == 1
+                ? "font-semibold bg-blue-900 rounded-md px-4 py-1"
+                : "font-medium"
+            } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
+          >
+            About Us
+          </Link>
+          <Link
+            href="/gallery"
+            className={`${
+              active == 2
+                ? "font-semibold bg-blue-900 rounded-md px-4 py-1"
+                : "font-medium"
+            } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
+          >
+            Gallery
+          </Link>
+          <Link
+            href="/petrodays"
+            className={`${
+              active == 3
+                ? "font-semibold bg-blue-900 rounded-md px-4 py-1"
+                : "font-medium"
+            } text-[14px] lg:text-[18px] hover:font-semibold truncate text-white`}
+          >
+            Petrodays Competition
+          </Link>
+          <Link
+            href="/membership"
+            className={`${
+              active == 4
+                ? "font-semibold bg-blue-900 rounded-md px-4 py-1 text-white"
+                : "font-medium"
+            } text-[14px] lg:text-[18px] hover:font-semibold truncate`}
+          >
+            Membership
+          </Link>
         </div>
       </div>
     </nav>

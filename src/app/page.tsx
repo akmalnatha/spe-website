@@ -1,11 +1,22 @@
+"use client";
 import Link from "next/link";
 import Slider from "@/components/slider";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  });
+
   return (
     <main className="w-full h-full bg-white relative overflow-hidden pb-32">
       <div className="flex flex-col lg:flex-row w-full h-full">
-        <div className="flex flex-col w-full lg:w-1/2 pt-36 px-10 md:pt-36 md:pl-10 lg:pt-64 lg:pl-16">
+        <div
+          className="flex flex-col w-full lg:w-1/2 pt-36 px-10 md:pt-36 md:pl-10 lg:pt-64 lg:pl-16"
+          data-aos="fade-right"
+        >
           <h1 className="text-3xl md:text-6xl text-[#1F3576] font-bold text-poppins">
             Society of Petroleum Engineers
           </h1>
@@ -38,16 +49,23 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center lg:items-end lg:justify-end pt-14 lg:pt-28 w-full lg:w-1/2">
-          <img src="./assets/home1.png" className="w-4/5 h-[60vh] md:h-[84vh] rounded-lg" />
+        <div className="flex justify-center lg:items-end lg:justify-end pt-14 lg:pt-18 w-full lg:w-1/2">
+          <img
+            src="./assets/home1.png"
+            className="w-4/5 h-auto lg:h-[92vh] lg:w-[90%] rounded-lg"
+            data-aos="fade-down"
+          />
         </div>
       </div>
 
       <div className="flex flex-col bg-white mt-24">
-        <h1 className="text-3xl md:text-6xl text-[#1F3576] font-bold text-poppins mx-auto">
+        <h1
+          className="text-3xl md:text-6xl text-[#1F3576] font-bold text-poppins mx-auto"
+          data-aos="fade-left"
+        >
           What Do They Say?
         </h1>
-        <div className="flex flex-row mt-2 md:mt-14">
+        <div className="flex flex-row mt-2 md:mt-14" data-aos="fade-up">
           <Slider />
         </div>
       </div>
