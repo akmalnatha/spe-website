@@ -1,7 +1,21 @@
-export default function ImageBox({ url }: { url: string }) {
+// ImageBox.js
+
+import { useState } from "react";
+
+const ImageBox = ({ url, onLoad }: { url: string; onLoad: () => void }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  const handleLoad = () => {
+    setLoaded(true);
+    onLoad();
+  };
+
   return (
-    <div className="rounded-xl overflow-hidden justify-evenly">
-      <img src={url} alt="Image" className="h-auto w-full" />
+    <div className="image-box">
+      <img src={url} alt="Gallery" onLoad={handleLoad} />
+      {!loaded && <div className="loading-overlay">Loading...</div>}
     </div>
   );
-}
+};
+
+export default ImageBox;
