@@ -41,7 +41,7 @@ function Slides({ className }: SlidesProp) {
           return matches ? -1 : 0;
         }
       });
-    }, 3000);
+    }, 7000);
 
     if (matches) {
       setIndex(-1);
