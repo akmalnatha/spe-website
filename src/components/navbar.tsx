@@ -162,7 +162,7 @@ function Navbar() {
             Gallery
           </Link>
           <Link
-            href="/petrodays"
+            href="/petrodays-competition"
             className={`${
               active == 3
                 ? "font-semibold bg-blue-900 rounded-md px-4 py-1"

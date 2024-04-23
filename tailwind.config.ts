@@ -18,6 +18,7 @@ const config: Config = {
         leagueSpartan: ["var(--font-league-spartan)"],
         lato: ["var(--font-lato)"],
         plusJakartaSans: ["var(--font-plus-jakarta-sans)"],
+        redHatDisplay: ["var(--font-red-hat-display)"],
       },
     },
   },
