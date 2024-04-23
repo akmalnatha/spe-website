@@ -3,6 +3,7 @@ import { Lato } from "next/font/google";
 import { League_Spartan } from "next/font/google";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Poppins } from "next/font/google";
+import { Red_Hat_Display } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import "./globals.css";
@@ -37,6 +38,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
+const redHatDisplay = Red_Hat_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-red-hat-display",
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
 export const metadata: Metadata = {
   title: "SPE UI SC",
   description: "SPE Organization Website",
@@ -50,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${leagueSpartan.variable} ${lato.variable}`}>
+      <body className={`${poppins.variable} ${leagueSpartan.variable} ${lato.variable} ${plusJakartaSans.variable} bg-white`}>
         <Navbar />
         {children}
         <Footer />

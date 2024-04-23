@@ -11,6 +11,9 @@ export default function Membership() {
   });
   return (
     <>
+      <div className="w-full h-fit relative overflow-hidden pt-[56px] lg:pt-[72px] bg-white">
+        <div className="w-full h-[240px] border-l-[1440px] border-l-transparent border-t-[240px] border-t-red-500 bg-[#1F3576]"></div>
+      </div>
       <div className="w-full h-auto bg-white relative overflow-hidden">
         <img
           src="/assets/image copy.png"
