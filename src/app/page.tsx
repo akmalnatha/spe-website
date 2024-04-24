@@ -10,6 +10,10 @@ export default function Home() {
     AOS.init({ duration: 1000 });
   });
 
+  const text = {
+    title: ""
+  }
+
   return (
     <main className="w-full h-full bg-white relative overflow-hidden pb-32">
       <div className="flex flex-col lg:flex-row w-full h-full">

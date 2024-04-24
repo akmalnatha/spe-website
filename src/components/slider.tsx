@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { images } from "./constants";
+import { images } from "../lib/constants";
 import Description from "./description";
 
 const Slider = () => {
@@ -27,7 +27,7 @@ const Slider = () => {
     };
   }, [activeImage]);
   return (
-    <main className="grid place-items-center md:grid-cols-2 grid-cols-1 w-4/5 mx-auto max-w-5xl shadow-2xl rounded-2xl">
+    <main className="flex flex-col place-items-center gap-8 w-4/5 mx-auto max-w-5xl shadow-2xl rounded-2xl">
       <div
         className={`w-full flex justify-center items-center transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
       >
@@ -50,11 +50,13 @@ const Slider = () => {
           </div>
         ))}
       </div>
-      <Description
-        activeImage={activeImage}
-        clickNext={clickNext}
-        clickPrev={clickPrev}
-      />
+      <div className="w-4/5 h-1/2">
+        <Description
+          activeImage={activeImage}
+          clickNext={clickNext}
+          clickPrev={clickPrev}
+        />
+      </div>
     </main>
   );
 };
