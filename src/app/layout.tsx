@@ -21,14 +21,14 @@ const poppins = Poppins({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-poppins",
-  weight: ["100", "300", "400", "500", "600", "700"],
+  weight: ["100", "300", "400", "500", "600", "700", "800"],
 });
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-league-spartan",
-  weight: ["100", "300", "400", "500", "600", "700"],
+  weight: ["100", "300", "400", "500", "600", "700", "800"],
 });
 
 const plusJakartaSans = Plus_Jakarta_Sans({
