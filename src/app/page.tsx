@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
-import Slider from "@/components/slider";
+import Slider from "@/components/(home)/slider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Awards from "@/components/(about)/awards";
 
 export default function Home() {
   useEffect(() => {
@@ -11,8 +12,8 @@ export default function Home() {
   });
 
   const text = {
-    title: ""
-  }
+    title: "",
+  };
 
   return (
     <main className="w-full h-full bg-white relative overflow-hidden pb-32">
@@ -72,6 +73,15 @@ export default function Home() {
         <div className="flex flex-row mt-2 md:mt-14" data-aos="fade-up">
           <Slider />
         </div>
+      </div>
+
+      <div className="bg-white mt-24">
+        <Awards
+          img="./cooming soon.png"
+          title="About Us"
+          subtitle="mantep"
+          desc="Mantep"
+        />
       </div>
     </main>
   );

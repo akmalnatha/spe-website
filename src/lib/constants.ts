@@ -27,6 +27,6 @@ export const images = [
     id: 5,
     src: "/assets/anisa.png",
     title: "Annisa Nasywa",
-    desc: "I had the privilege of attending Field Trip to Halliburton held by SPE UI SC in October 2023. During the event, I had first-hand experience of the workshop area since the participants were able to visit the MWD and Wireline division’s tools area. Before the workshop tour, we also had some talk show sessions with the HR of Halliburton to get the information about the early career program from the company. Among those activities, the visit to Halliburton absolutely left an unforgettable impression for me.",
+    desc: "I had the privilege of attending Field Trip to Halliburton held by SPE UI SC in October 2023. During the event, I had first-hand experience of the workshop area since the participants were able to visit the MWD and Wireline division’s tools area. Before the workshop tour, we also had some talk show sessions with the HR of Halliburton to get the information about the early career program from the company.",
   },
 ];

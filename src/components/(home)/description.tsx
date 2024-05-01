@@ -1,5 +1,5 @@
 import React from "react";
-import { images } from "./constants";
+import { images } from "../../lib/constants";
 import left from "/public//left.svg";
 import right from "/public/right.svg";
 import { motion } from "framer-motion";
@@ -14,13 +14,13 @@ type Props = {
 
 const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
   return (
-    <div className="grid place-items-start w-full bg-gradient-to-b from-[#FCCF37] via-[#FAD431] to-[#FBE291] relative md:rounded-tr-3xl md:rounded-br-3xl">
+    <div className="place-items-start w-full bg-gradient-to-r from-[#142B6F] to-[#4B65B2] relative lg:rounded-3xl md:rounded-3xl">
       {images.map((elem, idx) => (
         <div
           key={idx}
           className={`${
             idx === activeImage
-              ? "block w-full h-full md:h-[80vh] py-8 lg:py-20 px-10 text-left"
+              ? "block w-full h-full md:h-[40vh] py-8 lg:py-10 px-10 text-left"
               : "hidden"
           }`}
         >
@@ -40,30 +40,14 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
             }}
             className="w-full"
           >
-            <div className="md:text-xl lg:text-3xl font-bold lg:font-extrabold text-black">
+            <div className="md:text-xl lg:text-[46px] font-bold text-[#FFCA00] font-poppins text-center">
               {elem.title}
             </div>
-            <div className="leading-relaxed font-medium text-[11px] md:text-[12px] lg:text-base tracking-wide h-60 md:h-40 italic text-black mt-4 lg:mt-6">
+            <div className="text-[11px] md:text-[12px] lg:text-[20px] font-poppins h-60 md:h-40 text-justify text-white mt-4 lg:mt-8">
               {" "}
               {elem.desc}
             </div>
           </motion.div>
-
-          <div className="absolute md:bottom-1 bottom-10 right-4 md:right-0 w-full flex justify-center items-center">
-            <div
-              className="absolute right-6 md:bottom-4 md:right-12 cursor-pointer text-[24px] text-black"
-              onClick={clickPrev}
-            >
-              <FaAngleLeft />
-            </div>
-
-            <div
-              className="absolute right-0 md:bottom-4 md:right-6 cursor-pointer text-[24px] text-black"
-              onClick={clickNext}
-            >
-              <FaAngleRight />
-            </div>
-          </div>
         </div>
       ))}
     </div>

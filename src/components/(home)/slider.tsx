@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { images } from "../lib/constants";
+import { images } from "../../lib/constants";
 import Description from "./description";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const Slider = () => {
   const [activeImage, setActiveImage] = useState(0);
@@ -26,17 +27,25 @@ const Slider = () => {
       clearTimeout(timer);
     };
   }, [activeImage]);
+
   return (
-    <main className="flex flex-col place-items-center gap-8 w-4/5 mx-auto max-w-5xl shadow-2xl rounded-2xl">
+    <main className="flex flex-col place-items-center gap-8 w-4/5 mx-auto max-w-5xl">
       <div
-        className={`w-full flex justify-center items-center transition-transform ease-in-out duration-500 md:rounded-2xl p-6 md:p-0`}
+        className={`w-full flex flex-row justify-center items-center transition-transform ease-in-out duration-500 p-6`}
       >
+        <div
+          className="cursor-pointer text-[24px] mr-[40px] text-black bg-[#4C66B3] rounded-full p-5"
+          onClick={clickPrev}
+        >
+          <FaAngleLeft />
+        </div>
+
         {images.map((elem, idx) => (
           <div
             key={idx}
             className={`${
               idx === activeImage
-                ? "block w-full h-auto md:h-[80vh] object-cover transition-all duration-500 ease-in-out"
+                ? "block object-cover transition-all duration-500 ease-in-out"
                 : "hidden"
             }`}
           >
@@ -45,12 +54,19 @@ const Slider = () => {
               alt=""
               width={400}
               height={400}
-              className="w-full h-full object-cover md:rounded-tl-3xl md:rounded-bl-3xl"
+              className="w-[648.7px] h-auto md:h-[388.55px] object-cover"
             />
           </div>
         ))}
+
+        <div
+          className="cursor-pointer text-[24px] ml-[40px] text-black bg-[#4C66B3] rounded-full p-5"
+          onClick={clickNext}
+        >
+          <FaAngleRight />
+        </div>
       </div>
-      <div className="w-4/5 h-1/2">
+      <div className="w-full h-full">
         <Description
           activeImage={activeImage}
           clickNext={clickNext}
