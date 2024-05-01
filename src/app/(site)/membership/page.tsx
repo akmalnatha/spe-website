@@ -27,7 +27,7 @@ export default function Membership() {
   });
   return (
     <div className="bg-white">
-      <div className="w-full h-fit relative overflow-hidden pt-[56px] lg:pt-[72px]">
+      <div className="w-full h-fit relative overflow-hidden pt-[76px] lg:pt-[92px]">
         <div className="relative w-full h-[34vw] sm:h-[26vw] lg:h-[16vw]">
           <div
             className="w-full h-[34vw] sm:h-[26vw] lg:h-[16vw] bg-[#F0F4F8] absolute top-0"

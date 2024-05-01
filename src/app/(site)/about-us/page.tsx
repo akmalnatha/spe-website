@@ -65,7 +65,7 @@ export default function AboutUs() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0 }}
-        className="w-full h-fit relative overflow-hidden pt-[56px] lg:pt-[72px]"
+        className="w-full h-fit relative overflow-hidden pt-[76px] lg:pt-[92px]"
       >
         <div className="w-full flex flex-col absolute top-[32%] sm:top-[23%] lg:top-[20%]">
           <motion.div
