@@ -75,14 +75,16 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-white mt-24">
+      <div className="bg-white mt-28">
         <Awards
           img="./awards/presedential.png"
           title="About Us"
           subtitle1="Presidential Award SPE International"
           subtitle2="Outstanding Student Chapter for 2022/2023 Stewardship"
-          desc1="The award recognizes the highest-ranked 10% of eligible student chapters that are exemplary in the scoring categories, "
+          desc1="The award recognizes the highest-ranked 10% of eligible student chapters that are exemplary in the scoring categories,"
           desc2="with other 27 SPE SCs across the world have won the 2023 Presidential Award for Outstanding Student Chapter."
+          button={true}
+          buttonText="Find Out More"
         />
       </div>
     </main>

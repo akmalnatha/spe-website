@@ -179,33 +179,39 @@ function Navbar() {
             Petrodays Competition
           </Link>
           <button
-          className={`${
-            active == 4
-              ? "font-extrabold text-[#1F3576]"
-              : "font-medium text-black"
-          } hamburger relative grow`}
-          onClick={(() => setPublicationOpen(!publicationOpen))}
+            className={`${
+              active == 4
+                ? "font-extrabold text-[#1F3576]"
+                : "font-medium text-black"
+            } hamburger relative grow`}
+            onClick={() => setPublicationOpen(!publicationOpen)}
           >
             <section className="flex items-center gap-2 text-[16px] md:text-[20px] lg:text-[24px] hover:font-extrabold hamburger">
               <p className="text-[14px] md:text-[16px] lg:text-[20px] hover:font-extrabold truncate hamburger">
-                Publication 
+                Publication
               </p>
               <span className="hamburger">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1em"
-                    viewBox="0 0 320 512"
-                    fill="currentcolor"
-                    className={
-                      (publicationOpen ? "origin-center rotate-180" : "") +
-                      " h-3 lg:h-5 w-4 lg:w-6 hamburger"
-                    }
-                  >
-                    <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
-                  </svg>
-                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 320 512"
+                  fill="currentcolor"
+                  className={
+                    (publicationOpen ? "origin-center rotate-180" : "") +
+                    " h-3 lg:h-5 w-4 lg:w-6 hamburger"
+                  }
+                >
+                  <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                </svg>
+              </span>
             </section>
-            <section className={`${publicationOpen ? "flex flex-col items-center gap-4 w-full lg:w-[184px]" : "hidden"} lg:absolute lg:top-[61px] lg:-left-5 lg:bg-[#FCCF37] lg:rounded-b-md lg:py-2 lg:shadow-[#1F3576] lg:shadow-md`}>
+            <section
+              className={`${
+                publicationOpen
+                  ? "flex flex-col items-center gap-4 w-full lg:w-[184px]"
+                  : "hidden"
+              } lg:absolute lg:top-[61px] lg:-left-5 lg:bg-[#FCCF37] lg:rounded-b-md lg:py-2 lg:shadow-[#1F3576] lg:shadow-md`}
+            >
               <Link
                 href="/publication/petromax"
                 className={`${
@@ -231,9 +237,7 @@ function Navbar() {
           <Link
             href="/membership"
             className={`${
-              active == 5
-                ? "font-extrabold"
-                : "font-medium text-black"
+              active == 5 ? "font-extrabold" : "font-medium text-black"
             } bg-[#1F3576] w-fit lg:w-auto py-1 px-4 rounded-full text-[14px] md:text-[16px] lg:text-[20px] hover:font-extrabold text-white truncate`}
           >
             Membership

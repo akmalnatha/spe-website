@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface awardProp {
   img: string;
   title: string;
@@ -5,6 +7,8 @@ interface awardProp {
   subtitle2: string;
   desc1: string;
   desc2: string;
+  button: boolean;
+  buttonText: string;
 }
 
 const Awards = ({
@@ -14,10 +18,22 @@ const Awards = ({
   subtitle2,
   desc1,
   desc2,
+  button,
+  buttonText,
 }: awardProp) => {
   return (
     <div className="flex flex-col lg:flex-row items-center bg-white">
-      <img src={img} className="w-1/2 h-fit"></img>
+      <div className="flex flex-col w-1/2 h-fit justify-center items-center">
+        <img src={img} className="w-full h-full"></img>
+        {button && (
+          <Link
+            href="/about-us"
+            className="w-fit text-[#142B6F] font-medium py-2 px-10 rounded-3xl mt-4 justify-center border-[3px] border-[#FFCA00]"
+          >
+            {buttonText}
+          </Link>
+        )}
+      </div>
       <div className="w-1/2 bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37] h-auto px-12 pt-16 pb-32 text-[#1F3576]">
         <h1 className="text-6xl font-bold font-poppins text-center">{title}</h1>
         <h2 className="text-3xl font-bold font-poppins mt-14">{subtitle1}</h2>
