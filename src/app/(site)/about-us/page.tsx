@@ -1,16 +1,14 @@
 "use client";
 
-import MarqueeComponent from "@/components/marquee";
-import Marquee from "@/components/marquee";
 import {
   AnimatePresence,
   motion,
-  useScroll,
-  useTransform,
 } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import Slides from "./components/slide";
-import Counter from "./components/counter";
+import { useEffect, useState } from "react";
+import Slides from "@/components/(about)/slide";
+import Counter from "@/components/(about)/counter";
+import Awards from "@/components/(about)/awards";
+import SlideItem from "@/components/(about)/slide-item";
 
 export default function AboutUs() {
   const [title] = useState(["Resilient", "Escalate", "Comprehensive"]); // Define your title here
@@ -20,6 +18,7 @@ export default function AboutUs() {
     "SPE is an international non-profit organization that provides unparalalled insights, shared expertise, and life-long learning to fuel the success of our members and the future of the oil and gas industry.",
   ]); // Define your description here
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [animationKey, setAnimationKey] = useState(0);
   const [isMobile, setIsMobile] = useState<boolean>();
 
@@ -67,7 +66,7 @@ export default function AboutUs() {
         viewport={{ once: false, amount: 0 }}
         className="w-full h-fit relative overflow-hidden pt-[76px] lg:pt-[92px]"
       >
-        <div className="w-full flex flex-col absolute top-[32%] sm:top-[23%] lg:top-[20%]">
+        <div className="w-full flex flex-col absolute top-[38%] sm:top-[26%] lg:top-[23%]">
           <motion.div
             variants={{
               hidden: {
@@ -109,7 +108,7 @@ export default function AboutUs() {
                 },
               },
             }}
-            className="text-center text-[20px] md:text-[28px] lg:text-[36px] xl:text-[48px] text-[#2F2F2F] font-lato italic font-semibold relative"
+            className="text-center text-[16px] md:text-[24px] lg:text-[32px] xl:text-[40px] text-[#2F2F2F] font-lato italic font-semibold relative"
           >
             <h1 className="leading-tight relative z-[2]">
               Strive Excellence, Solve the Challenge
@@ -136,12 +135,6 @@ export default function AboutUs() {
           }}
         ></div>
       </motion.div>
-      {/* <MarqueeComponent>
-        <h1 className="px-5 text-yellow-400 font-lato italic">SPE UI SC - Outstand Beyond Ordinary</h1>
-        <h1 className="px-5 text-yellow-400 font-lato italic">SPE UI SC - Outstand Beyond Ordinary</h1>
-        <h1 className="px-5 text-yellow-400 font-lato italic">SPE UI SC - Outstand Beyond Ordinary</h1>
-        <h1 className="px-5 text-yellow-400 font-lato italic">SPE UI SC - Outstand Beyond Ordinary</h1>
-      </MarqueeComponent> */}
       <div className="w-full bg-[#FFFFFF] pt-[1.3%] pb-[2.5%]">
         <div className="w-full relative overflow-hidden mb-4">
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-[#1F3576] font-poppins font-bold text-center relative z-[2]">
@@ -207,7 +200,61 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="w-full bg-[#FFFFFF] pb-[2.5%]">
+      <div className="bg-[url('/assets/visi_misi.png')] bg-cover bg-center p-[3.0556%]">
+        <div
+          className={`w-full h-auto rounded-md bg-gradient-to-r from-[#213D73] to-[#4B65B3] flex flex-col justify-start gap-2 md:gap-4 items-center p-[3%] md:p-[2%]`}
+          data-aos="zoom-in"
+        >
+          <div className="w-full relative overflow-hidden">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-center text-[#FBD233] font-poppins font-bold leading-snug relative z-[2]">
+              Our Vision
+            </h2>
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-center text-[#2F2F2F] font-poppins font-bold leading-snug absolute top-[2px] left-[2px] opacity-35 w-full">
+              Our Vision
+            </h2>
+          </div>
+          <p className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins" data-aos="fade-left">
+            To elevate SPE UI SC as an adept organization through a cohesive
+            working environment and extensive yet continuous networking while
+            also cultivating the potential of its people.
+          </p>
+        </div>
+        <div
+          className={`w-full h-auto rounded-md bg-gradient-to-r from-[#213D73] to-[#4B65B3] flex flex-col justify-start gap-2 md:gap-4 items-center p-[3%] md:p-[2%] mt-5`}
+          data-aos="zoom-in"
+        >
+          <div className="w-full relative overflow-hidden">
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-center text-[#FBD233] font-poppins font-bold leading-snug relative z-[2]">
+              Our Mission
+            </h2>
+            <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-center text-[#2F2F2F] font-poppins font-bold leading-snug absolute top-[2px] left-[2px] opacity-35 w-full">
+              Our Mission
+            </h2>
+          </div>
+          <p className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins" data-aos="fade-left">
+            Empower the team to be resilience within an organizational culture
+            to overcome obstacles and emerge as a stronger organization, by
+            creating a strong sense of belonging.
+          </p>
+          <p className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins" data-aos="fade-left">
+            Escalate the quality of work programs, relationships with
+            prospective stakeholders and networking opportunities to
+            continuously strive for wider community.
+          </p>
+          <p className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins" data-aos="fade-left">
+            Committed to provide a learning environment through a comprehensive
+            oil and gas knowledge,  professional skills, competitions
+            opportunities and personal development programs for career
+            development across all members.
+          </p>
+          <p className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins" data-aos="fade-left">
+            Comprehensively build the organization's quality from internal and
+            external scope to maintain and enhance member engagement across
+            diverse majors in engineering.
+          </p>
+        </div>
+      </div>
+      <div className="w-full bg-[#FFFFFF] py-[2.5%]">
         <div className="w-full relative overflow-hidden">
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-center text-[#1F3576] font-poppins font-bold leading-snug relative z-[2]">
             <span className="text-[#FBD233]">Our</span> Core Values
@@ -216,7 +263,11 @@ export default function AboutUs() {
             Our Core Values
           </h2>
         </div>
-        <Slides />
+        <Slides className="w-full h-64" slideDesktop={-33} slideMobile={-100} amount={3} currentItem={(current) => setCurrentSlide(current)}>
+          <SlideItem type="resilient" active={currentSlide === -1} innerClassName="w-60 md:w-72 lg:w-80 h-fit" parentClassName="w-screen lg:w-[33vw]"/>
+          <SlideItem type="escalate" active={currentSlide === 0} innerClassName="w-60 md:w-72 lg:w-80 h-fit" parentClassName="w-screen lg:w-[33vw]" />
+          <SlideItem type="comprehensive" active={currentSlide === 1} innerClassName="w-60 md:w-72 lg:w-80 h-fit" parentClassName="w-screen lg:w-[33vw]" />
+        </Slides>
         <motion.div
           key={animationKey}
           variants={{
@@ -257,9 +308,7 @@ export default function AboutUs() {
               }}
               className="text-center text-[20px] md:text-[28px] lg:text-[36px] xl:text-[44px] text-[#FBD233] font-poppins font-bold relative"
             >
-              <h3 className="relative z-[2]">
-                {title[currentIndex]}
-              </h3>
+              <h3 className="relative z-[2]">{title[currentIndex]}</h3>
               <h3 className="absolute text-center text-[#2F2F2F] top-[2px] left-[2px] opacity-35 w-full">
                 {title[currentIndex]}
               </h3>
@@ -292,6 +341,18 @@ export default function AboutUs() {
           </AnimatePresence>
         </motion.div>
       </div>
+      <div>
+        <Awards
+          img="/awards/presedential.png"
+          title="About Us"
+          subtitle1="Presidential Award SPE International"
+          subtitle2="Outstanding Student Chapter for 2022/2023 Stewardship"
+          desc1="The award recognizes the highest-ranked 10% of eligible student chapters that are exemplary in the scoring categories,"
+          desc2="with other 27 SPE SCs across the world have won the 2023 Presidential Award for Outstanding Student Chapter."
+          button={true}
+          buttonText="Find Out More"
+        />
+      </div>
       <div className="w-full bg-[#FFFFFF] pb-[2.5%]">
         <div className="w-full relative overflow-hidden mb-3">
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-center text-[#1F3576] font-poppins font-bold leading-snug relative z-[2]">
@@ -302,7 +363,11 @@ export default function AboutUs() {
           </h2>
         </div>
         <div className="w-full h-auto px-[3.333%]">
-          <img src={"/assets/organogram.png"} alt={"organogram"} className="object-contain"/>
+          <img
+            src={"/assets/organogram.png"}
+            alt={"organogram"}
+            className="object-contain"
+          />
         </div>
       </div>
     </>
