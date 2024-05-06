@@ -1,14 +1,19 @@
 "use client";
 import Link from "next/link";
-import Slider from "@/components/slider";
+import Slider from "@/components/(home)/slider";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Awards from "@/components/(about)/awards";
 
 export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   });
+
+  const text = {
+    title: "",
+  };
 
   return (
     <main className="w-full h-full bg-white relative overflow-hidden pb-32">
@@ -68,6 +73,19 @@ export default function Home() {
         <div className="flex flex-row mt-2 md:mt-14" data-aos="fade-up">
           <Slider />
         </div>
+      </div>
+
+      <div className="bg-white mt-28">
+        <Awards
+          img="./awards/presedential.png"
+          title="About Us"
+          subtitle1="Presidential Award SPE International"
+          subtitle2="Outstanding Student Chapter for 2022/2023 Stewardship"
+          desc1="The award recognizes the highest-ranked 10% of eligible student chapters that are exemplary in the scoring categories,"
+          desc2="with other 27 SPE SCs across the world have won the 2023 Presidential Award for Outstanding Student Chapter."
+          button={true}
+          buttonText="Find Out More"
+        />
       </div>
     </main>
   );

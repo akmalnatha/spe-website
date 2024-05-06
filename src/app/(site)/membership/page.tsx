@@ -1,158 +1,230 @@
 "use client";
-import Link from "next/link";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import redirect from "next/navigation";
+import Image from "next/image";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import Button from "@/components/button";
 
 export default function Membership() {
+  const openRegistrationForm = () => {
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLScQDSg4YLx2kxm3KwVWukvRvyMgcGd_5HebH23gxfDXZEI21A/viewform",
+      "_blank"
+    );
+  };
+  const EmbedVideo = () => (
+    <iframe
+      width="100%"
+      height="100%"
+      src={`https://drive.google.com/file/d/1_tqrDdsntJTJJ0ppBFtAeo9ZZOg_3kPY/preview`}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="Embedded video"
+      className="absolute top-0 left-0"
+    />
+  );
   useEffect(() => {
     AOS.init({ duration: 1000 });
   });
   return (
-    <>
-      <div className="w-full h-fit relative overflow-hidden pt-[56px] lg:pt-[72px] bg-white">
-        <div className="w-full h-[240px] border-l-[1440px] border-l-transparent border-t-[240px] border-t-red-500 bg-[#1F3576]"></div>
+    <div className="bg-white">
+      <div className="w-full h-fit relative overflow-hidden pt-[76px] lg:pt-[92px]">
+        <div className="relative w-full h-[34vw] sm:h-[26vw] lg:h-[16vw]">
+          <div
+            className="w-full h-[34vw] sm:h-[26vw] lg:h-[16vw] bg-[#F0F4F8] absolute top-0"
+            style={{
+              WebkitClipPath: "polygon(100% 30%, 100% 0, 0 0, 0 100%)",
+              clipPath: "polygon(100% 30%, 100% 0, 0 0, 0 100%)",
+            }}
+          ></div>
+          <div
+            className="w-full h-[34vw] sm:h-[26vw] lg:h-[16vw] bg-[#1F3576] absolute top-0"
+            style={{
+              WebkitClipPath: "polygon(0 30%, 0 0, 100% 0, 100% 100%)",
+              clipPath: "polygon(0 30%, 0 0, 100% 0, 100% 100%)",
+            }}
+          ></div>
+          <div className="w-fit h-full pt-[3.88889%] lg:pt-[3%] xl:pt-[2.5%] pr-[4.44444%] ml-auto">
+            <div
+              className="w-full h-full relative overflow-hidden"
+              data-aos="fade-down"
+            >
+              <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[88px] text-white font-poppins font-bold text-right relative z-[2]">
+                Membership
+              </h2>
+              <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[88px] text-[#2F2F2F] font-poppins font-bold text-right absolute top-[2px] left-[2px] opacity-35">
+                Membership
+              </h2>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="w-full h-auto bg-white relative overflow-hidden">
-        <img
-          src="/assets/image copy.png"
-          className="absolute my-auto top-0 h-full md:h-screen w-full"
-        />
+      <div className="w-full h-auto relative overflow-hidden px-[4.44444%] pt-5">
         <div
-          className="bg-white bg-opacity-35 backdrop-blur-md w-[60%] md:w-1/2 h-[60%] md:h-screen pt-[110px] lg:pt-[120px] pb-[96px] lg:pb-[180px] px-[7.5%] lg:px-[92px] border-[1px] border-white"
+          className="bg-[#1F3576] text-white p-3 text-[14px] md:text-[16px] lg:text-[20px] text-justify font-poppins indent-20"
           data-aos="fade-right"
         >
-          <h1
-            className="text-black font-bold text-[22px] md:text-[32px] lg:text-[48px] xl:text-[56px]"
-            data-aos="fade-down"
-          >
-            SPE UI SC 2024
-          </h1>
-          <p
-            className="text-black font-poppins text-[11px] lg:text-[17px] xl:text-[20px] md:text-justify mt-6 lg:mt-8"
-            data-aos="fade-right"
-          >
-            SPE as the{" "}
-            <span className="font-bold">
-              largest and internationally recognized oil and gas organization
-            </span>
-            , provides students with technical oil and gas knowledge and soft
-            skills needed to solve the impending energy challenges
-          </p>
-          <p
-            className="text-black font-poppins text-[11px] md:text-[13 px] lg:text-[17px] xl:text-[20px] md:text-justify mt-6 lg:mt-8"
-            data-aos="fade-right"
-          >
-            Becoming an SPE member will provide you with many opportunities to{" "}
-            <span className="font-bold">network with other </span> student
-            members and local/global industry professionals and{" "}
-            <span className="font-bold">acquire career-advancing skills </span>{" "}
-            through our work programs.
-          </p>
-          <div
-            className="flex flex-col lg:flex-row mt-6 md:mt-10 gap-2 md:gap-4"
-            data-aos="fade-up"
-          >
-            <Link
-              href={"https://bit.ly/JoinSPE2024"}
-              className="flex flex-row w-fit justify-center items-center gap-4 bg-sky-950 px-4 py-2 md:px-6 md:py-2 rounded-full text-[10px] md:text-[16px] lg:text-[20px] text-white font-semibold"
-            >
-              Register
-              <FaExternalLinkAlt />
-            </Link>
-
-            <Link
-              href={"https://bit.ly/SPEUISC2024MembershipGuidebook"}
-              className="flex flex-row w-fit justify-center items-center gap-4 bg-sky-950 px-4 py-2 md:px-6 md:py-2 rounded-full text-[10px] md:text-[16px] lg:text-[20px] text-white font-semibold"
-            >
-              Guidebook
-              <FaExternalLinkAlt />
-            </Link>
-          </div>
+          SPE is the{" "}
+          <span className="text-[16px] md:text-[18px] lg:text-[22px] font-bold">
+            largest individual-member organization
+          </span>{" "}
+          serving engineers and professionals worldwide in the upstream segment
+          of the{" "}
+          <span className="text-[16px] md:text-[18px] lg:text-[22px] font-bold text-[#FBD035]">
+            Oil & Gas Industry.
+          </span>{" "}
+          Provide students with technical Oil & Gas knowledge and soft skills
+          that are needed to prepare future leaders in solving the impending
+          energy challenges. SPE UI SC is linked to SPE International.
         </div>
-      </div>
-
-      <div className="w-full bg-white text-black pt-[36px] lg:pt-[72px] pb-[44px] lg:pb-[100px] px-[6.805%] lg:px-[98px] relative overflow-hidden">
-        <h1 className="font-bold text-[32px] md:text-[40px] lg:text-[56px]">
-          What Will You Get as Our Member?
-        </h1>
-        <div className="w-4/5">
-          <div className="flex flex-col gap-9 mt-8 lg:mt-10">
-            <div className="flex gap-6">
-              <div className="flex items-center px-5 lg:px-10 border-r-8 border-[#FCCF37] font-poppins font-semibold text-[24px] md:text-[36px] lg:text-[48px]">
-                {" "}
-                {/*flex element 1*/}1
-              </div>
-              <div className="flex justify-center flex-col gap-2">
-                <h3 className="text-[20px] md:text-[24px] lg:text-[28px] font-bold font-poppins">
-                  Valuable Resources
-                </h3>
-                <p className="font-poppins text-[14px] md:text-[16px] lg:text-[20px] text-justify">
-                  A valuable resource of knowledge from our lectures, seminars,
-                  visit-events, etc.
-                </p>
+        <div className="flex flex-col md:flex-row justify-between items-center lg:items-end mt-6">
+          <div className="flex flex-col gap-4 items-center w-[85%] sm:w-[75%] md:w-fit">
+            <h3
+              className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold font-poppins text-black w-fit"
+              data-aos="fade-left"
+            >
+              Video Tutorial Registration Member
+            </h3>
+            <div
+              className="w-[85%] sm:w-[75%] md:w-[316px] h-fit"
+              data-aos="zoom-in"
+            >
+              <div className="relative overflow-hidden h-0 pb-[177.75%]">
+                <EmbedVideo />
               </div>
             </div>
-            <div className="flex gap-6">
-              <div className="flex items-center px-[17px] lg:px-[34px] border-r-8 border-[#FCCF37] font-poppins font-semibold text-[24px] md:text-[36px] lg:text-[48px]">
-                {" "}
-                {/*flex element 2*/}2
-              </div>
-              <div className="flex justify-center flex-col gap-2">
-                <h3 className="text-[20px] md:text-[24px] lg:text-[28px] font-bold font-poppins">
-                  Scholarship Opportunities
-                </h3>
-                <p className="font-poppins text-[14px] md:text-[16px] lg:text-[20px] text-justify">
-                  We offer scholarship opportunities from SPE Java.
-                </p>
-              </div>
+          </div>
+          <div className="w-full md:w-[50%] flex flex-col gap-12 justify-end items-center mt-5 md:mt-0">
+            <p
+              className="text-black text-[14px] md:text-[16px] lg:text-[20px] text-justify font-poppins font-medium"
+              data-aos="fade-left"
+            >
+              By becoming an SPE International member, you will get provided
+              with{" "}
+              <span className="text-[#1F3576] font-bold">
+                many opportunities
+              </span>{" "}
+              to <span className="text-[#FBD035] font-bold">network</span> with
+              other student members and local/global industry professionals and
+              acquire career-advancing skills through our work programs.
+            </p>
+            <div
+              className="w-full hidden lg:flex items-center justify-center"
+              data-aos="fade-left"
+            >
+              <Button
+                type={"button"}
+                textClass="text-[#1F3576] underline font-medium font-redHatDisplay"
+                color="secondary"
+                text="Click Here To Register!"
+                shape="rounded-medium"
+                fitContent
+                onClick={openRegistrationForm}
+              />
             </div>
-            <div className="flex gap-6">
-              <div className="flex items-center px-[17px] lg:px-[34px] border-r-8 border-[#FCCF37] font-poppins font-semibold text-[24px] md:text-[36px] lg:text-[48px]">
-                {" "}
-                {/*flex element 3*/}3
-              </div>
-              <div className="flex justify-center flex-col gap-2">
-                <h3 className="text-[20px] md:text-[24px] lg:text-[28px] font-bold font-poppins">
-                  Skill Upgrade
-                </h3>
-                <p className="font-poppins text-[14px] md:text-[16px] lg:text-[20px] text-justify">
-                  Acquire career-advancing skills through SPE&apos;s work
-                  programs.
-                </p>
-              </div>
+            <div
+              className="w-full flex lg:hidden items-center justify-center"
+              data-aos="fade-left"
+            >
+              <Button
+                type={"button"}
+                color="secondary"
+                text="Click Here To Register!"
+                shape="rounded-small"
+                fitContent
+              />
             </div>
-            <div className="flex gap-6">
-              <div className="flex items-center px-[17px] lg:px-[34px] border-r-8 border-[#FCCF37] font-poppins font-semibold text-[24px] md:text-[36px] lg:text-[48px]">
-                {" "}
-                {/*flex element 4*/}4
-              </div>
-              <div className="flex justify-center flex-col gap-2">
-                <h3 className="text-[20px] md:text-[24px] lg:text-[28px] font-bold font-poppins">
-                  Global Network
-                </h3>
-                <p className="font-poppins text-[14px] md:text-[16px] lg:text-[20px] text-justify">
-                  Access to the global community of SPE International and
-                  network with other student members and worldwide industry
-                  professionals
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-6">
-              <div className="flex items-center px-[17px] lg:px-[34px] border-r-8 border-[#FCCF37] font-poppins font-semibold text-[24px] md:text-[36px] lg:text-[48px]">
-                {" "}
-                {/*flex element 5*/}5
-              </div>
-              <div className="flex justify-center flex-col gap-2">
-                <h3 className="text-[20px] md:text-[24px] lg:text-[28px] font-bold font-poppins">
-                  Free / discounted resources & Many more!
-                </h3>
-              </div>
+            <div
+              className={`relative w-full h-[132px] sm:h-[184px] md:h-[144px] lg:h-[164px] xl:h-[240px]`}
+              data-aos="fade-left"
+            >
+              <Image
+                src={"/assets/jacket_photo.png"}
+                alt={"SPE UI Jacket"}
+                className="object-cover"
+                fill
+              />
             </div>
           </div>
         </div>
       </div>
-    </>
+      <div
+        className="w-full h-fit relative overflow-hidden pt-14"
+        style={{ boxShadow: "6px 4px 4px rgba(0, 0, 0, 0.25)" }}
+      >
+        <div className="w-full h-full relative">
+          <img
+            src="/assets/member_benefits_bg.png"
+            alt="background"
+            className="object-cover w-full h-[20vw] sm:h-[16vw]"
+          />
+          <div className="absolute w-fit h-full top-[5%] pr-[7.5%] right-0">
+            <div className="w-fit h-full relative" data-aos="fade-down">
+              <h2 className="text-[24px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[76px] text-white font-poppins font-bold text-right relative z-[2]">
+                SPE Member <span className="font-normal">Benefits</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full overflow-hidden py-16 px-[10%] lg:px-[8.3333%] grid grid-cols-1 lg:grid-cols-4 gap-x-5 divide-y-4 lg:divide-y-0 lg:divide-x-4 divide-[#FFCA00]">
+        <div
+          className="text-black flex flex-col items-center justify-center gap-7 py-7 pl-7"
+          data-aos="flip-right"
+        >
+          <img
+            src="/assets/opportunity.svg"
+            alt=""
+            className="w-[25%] sm:w-[20%] lg:w-fit h-fit"
+          />
+          <p className="text-black font-bold font-poppins text-center text-[14px] md:text-[16px] lg:text-[20px]">
+            Scholarship and fellowship opportunities
+          </p>
+        </div>
+        <div
+          className="text-black flex flex-col lg:flex-col-reverse items-center justify-center gap-7 py-7 pl-7"
+          data-aos="flip-left"
+        >
+          <img
+            src="/assets/career.svg"
+            alt=""
+            className="w-[25%] sm:w-[20%] lg:w-fit h-fit"
+          />
+          <p className="text-black font-bold font-poppins text-center text-[14px] md:text-[16px] lg:text-[20px]">
+            Acquire career-advancing skills through our work programs
+          </p>
+        </div>
+        <div
+          className="text-black flex flex-col items-center justify-center gap-7 py-7 pl-7"
+          data-aos="flip-right"
+        >
+          <img
+            src="/assets/community.svg"
+            alt=""
+            className="w-[25%] sm:w-[20%] lg:w-fit h-fit"
+          />
+          <p className="text-black font-bold font-poppins text-center text-[14px] md:text-[16px] lg:text-[20px]">
+            {" "}
+            Access to the global community from SPE International to network
+            with local / global industry professionals
+          </p>
+        </div>
+        <div
+          className="text-black flex flex-col lg:flex-col-reverse items-center justify-center gap-7 py-7 pl-7"
+          data-aos="flip-left"
+        >
+          <img
+            src="/assets/resource.svg"
+            alt=""
+            className="w-[25%] sm:w-[20%] lg:w-fit h-fit"
+          />
+          <p className="text-black font-bold font-poppins text-center text-[14px] md:text-[16px] lg:text-[20px]">
+            Free / discounted resources
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }

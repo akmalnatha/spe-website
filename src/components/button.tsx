@@ -2,6 +2,7 @@ import { FormEventHandler, MouseEventHandler } from "react";
 
 function Button({
   text,
+  textClass,
   type,
   onClick,
   onSubmit,
@@ -14,6 +15,7 @@ function Button({
   disable = false,
 }: {
   text?: string;
+  textClass?: string;
   type: "button" | "submit" | "reset" | undefined;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
   onSubmit?: FormEventHandler<HTMLButtonElement> | undefined;
@@ -41,9 +43,9 @@ function Button({
         disable
           ? `cursor-not-allowed border-gray-subtext border-2`
           : color == "primary"
-            ? "bg-black active:bg-black hover:bg-dark-maintext border-black active:border-black hover:border-dark-maintext border-2"
+            ? "bg-black active:bg-black hover:bg-[#232323] border-black active:border-black hover:border-[#232323] border-2"
             : color == "secondary"
-              ? "bg-black active:bg-black hover:bg-dark-maintext border-white border-2"
+              ? "bg-[#FDD001] active:bg-[#FDD001] hover:bg-[#FFD823] border-[#FDD001] active:border-[#FDD001] hover:border-[#FFD823] border-2"
               : color == "green"
                 ? "bg-green-secondary active:bg-green-secondary hover:bg-green-accent border-green-secondary active:border-green-secondary hover:border-green-accent border-2"
                 : color == "red"
@@ -54,7 +56,7 @@ function Button({
       {isLoading ? (
         <div
           className={`${
-            disable ? "text-gray-subtext" : color == "hollow" ? "hover:text-white" : "text-white"
+            disable ? "text-gray-500" : color == "hollow" ? "hover:text-white" : textClass ? textClass : "text-white"
           }  flex items-center justify-center`}
         >
           <svg
@@ -82,7 +84,7 @@ function Button({
       ) : (
         <div
           className={`${
-            disable ? "text-gray-subtext" : color == "hollow" ? "hover:text-white" : "text-white"
+            disable ? "text-gray-500" : color == "hollow" ? "hover:text-white" : textClass ? textClass : "text-white"
           } ${
             iconPosition == "right" ? "" : "flex-row-reverse"
           } ${icon == undefined ? "" : "flex items-center justify-center gap-3"}`}
