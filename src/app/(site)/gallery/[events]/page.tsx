@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from "react";
 import galleryData from "@/lib/gallery";
+import Slides from "@/components/(about)/slide";
+import SlideItem from "@/components/(about)/slide-item";
 
 const EventPage = ({ params }: { params: { events: number } }) => {
   const index = params.events;
-
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [galleryLength, setGalleryLength] = useState(0);
+
+  const [currentSlide, setCurrentSlide] = useState(-1);
 
   useEffect(() => {
     const eventGallery = galleryData.find((item) => item.index == index);
@@ -15,14 +17,6 @@ const EventPage = ({ params }: { params: { events: number } }) => {
       setGalleryLength(eventGallery.events.length);
     }
   }, [index]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % galleryLength);
-    }, 3000); // Change slide every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [galleryLength]);
 
   if (galleryLength === 0) {
     return <div>Event not found</div>;
@@ -39,20 +33,27 @@ const EventPage = ({ params }: { params: { events: number } }) => {
       <h2 className="text-[#1F3576] font-bold text-6xl">
         {eventGallery.title}
       </h2>
-      <div className="flex flex-wrap">
+      <Slides
+        className="w-full h-[30vw]"
+        partial
+        slideDesktop={-25}
+        slidePartial={-50}
+        slideMobile={-100}
+        amount={eventGallery.events.length}
+        currentItem={(current) => setCurrentSlide(current)}
+      >
         {eventGallery.events.map((event, idx) => (
-          <img
-            key={idx}
-            src={event}
-            alt={`Event ${index} Image ${idx}`}
-            className={`m-2 w-[50vw] h-[30vw] ${
-              idx === currentIndex ? "opacity-100" : "opacity-0 absolute"
-            }`}
-            style={{ transition: "opacity 0.5s ease-in-out" }}
-          />
+          <SlideItem
+            type={undefined}
+            active={currentSlide === -1 + idx}
+            innerClassName="w-[50vw] left-0 right-0 mx-auto h-fit px-[52px]"
+            parentClassName="w-screen lg:w-[50vw]"
+          >
+            <img src={event} alt={`Event ${index} Image ${idx}`} />
+          </SlideItem>
         ))}
-      </div>
-      <p className="w-4/5 text-white font-poppins text-2xl text-center px-12 py-8 rounded-xl bg-[black]">
+      </Slides>
+      <p className="w-4/5 text-white font-poppins text-2xl text-center px-12 py-8 rounded-xl bg-gradient-to-r from-[#142B6F] to-[#4B65B2]">
         {eventGallery.desc}
       </p>
     </div>

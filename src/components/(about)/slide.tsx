@@ -8,12 +8,14 @@ type SlidesProp = {
   className?: string;
   children?: ReactNode;
   slideMobile: number;
+  slidePartial?: number;
   slideDesktop: number;
   amount: number;
   currentItem: (index: number) => void;
+  partial?: boolean;
 };
 
-function Slides({ className, children, slideDesktop, slideMobile, amount, currentItem }: SlidesProp) {
+function Slides({ className, children, slideDesktop, slidePartial, slideMobile, amount, currentItem, partial }: SlidesProp) {
   const [index, setIndex] = useState(-1);
   const [matches, setMatches] = useState<boolean>();
 
@@ -32,7 +34,7 @@ function Slides({ className, children, slideDesktop, slideMobile, amount, curren
 
   const styleSlide = {
     container: (isScreenBased: any) => ({
-      left: isScreenBased ? `${slideDesktop * index}vw` : `${slideMobile * index}vw`,
+      left: isScreenBased ? `${partial && index != -1 ? index == 0 ? slideDesktop : index % 2 != 0 ? slidePartial!+slideDesktop * index : (slidePartial!+(slideDesktop/2))* index : slideDesktop * index}vw` : `${slideMobile * index}vw`,
     }),
   };
 
@@ -50,6 +52,7 @@ function Slides({ className, children, slideDesktop, slideMobile, amount, curren
       });
     }, 7000);
 
+    console.log(matches)
     if (matches) {
       currentItem(-1);
       setIndex(-1);

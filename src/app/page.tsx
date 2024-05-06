@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Awards from "@/components/(about)/awards";
+import HomeGallery from "@/components/(home)/gallery";
 
 export default function Home() {
   useEffect(() => {
@@ -86,6 +87,10 @@ export default function Home() {
           button={true}
           buttonText="Find Out More"
         />
+      </div>
+
+      <div className="mt-28">
+        <HomeGallery />
       </div>
     </main>
   );
