@@ -48,7 +48,7 @@ function Navbar() {
       setActive(0);
     } else if (location == "/about-us") {
       setActive(1);
-    } else if (location == "/gallery") {
+    } else if (location.includes("/gallery")) {
       setActive(2);
     } else if (location == "/petrodays") {
       setActive(3);
@@ -169,7 +169,7 @@ function Navbar() {
             Gallery
           </Link>
           <Link
-            href="/petrodays-competition"
+            href="/petrodays"
             className={`${
               active == 3
                 ? "font-extrabold text-[#1F3576]"
