@@ -14,7 +14,7 @@ const Article = () => {
             {elem.index % 2 !== 0 ? (
               <>
                 {/* Render image on the left and text on the right */}
-                <div className="flex flex-row border-t-8 border-[#1F3576] p-11 justify-center items-center gap-8">
+                <div className="flex flex-row border-t-8 border-[#1F3576] py-11 mx-12 justify-center items-center gap-8">
                   <img
                     src={elem.image}
                     alt={elem.alt}
@@ -25,7 +25,7 @@ const Article = () => {
                       {elem.title}
                     </h1>
 
-                    <p className="text-[#142B6F] font-light font-poppins text-2xl">
+                    <p className="text-[#142B6F] text-justify font-light font-poppins text-2xl">
                       {elem.text}
                     </p>
 
@@ -41,7 +41,7 @@ const Article = () => {
             ) : (
               <>
                 {/* Render image on the right and text on the left */}
-                <div className="flex flex-row border-t-8 border-[#1F3576] p-11 justify-center items-center gap-8">
+                <div className="flex flex-row border-t-8 border-[#1F3576] py-11 mx-12 justify-center items-center gap-8">
                   <div className="w-1/2 flex flex-col gap-4 px-16">
                     <div className="flex justify-end">
                       <h1 className="text-[#142B6F] font-bold font-poppins text-3xl">
@@ -49,7 +49,7 @@ const Article = () => {
                       </h1>
                     </div>
 
-                    <p className="text-[#142B6F] font-light font-poppins text-2xl">
+                    <p className="text-[#142B6F] font-light text-justify font-poppins text-2xl">
                       {elem.text}
                     </p>
 

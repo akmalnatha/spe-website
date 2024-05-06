@@ -6,8 +6,8 @@ export default function SpeEnergized() {
       <div className="flex flex-col">
         <div className="">
           <h1
-            className="text-white w-screen h-full font-bold font-poppins text-center justify-center items-center text-9xl py-20 px-auto bg-no-repeat"
-            style={{ backgroundImage: "url('./assets/Mask group.svg')" }}
+            className="text-white w-screen h-full font-bold font-poppins text-center justify-center items-center text-9xl py-20 px-auto bg-no-repeat bg-cover"
+            style={{ backgroundImage: "url('/assets/Mask group.svg')" }}
           >
             SPEnergized
           </h1>
