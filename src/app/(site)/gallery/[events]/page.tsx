@@ -35,21 +35,26 @@ const EventPage = ({ params }: { params: { events: number } }) => {
   }
 
   return (
-    <div className="w-full h-full bg-white relative overflow-hidden py-32">
-      <h2>Event {index}</h2>
+    <div className="flex flex-col w-full h-full bg-white relative items-center overflow-hidden pt-32 pb-10 gap-11">
+      <h2 className="text-[#1F3576] font-bold text-6xl">
+        {eventGallery.title}
+      </h2>
       <div className="flex flex-wrap">
         {eventGallery.events.map((event, idx) => (
           <img
             key={idx}
             src={event}
             alt={`Event ${index} Image ${idx}`}
-            className={`m-2 ${
+            className={`m-2 w-[50vw] h-[30vw] ${
               idx === currentIndex ? "opacity-100" : "opacity-0 absolute"
             }`}
             style={{ transition: "opacity 0.5s ease-in-out" }}
           />
         ))}
       </div>
+      <p className="w-4/5 text-white font-poppins text-2xl text-center px-12 py-8 rounded-xl bg-[black]">
+        {eventGallery.desc}
+      </p>
     </div>
   );
 };
