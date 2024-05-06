@@ -1,14 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import clsx from "clsx";
 import SlideItem from "./slide-item";
 
 type SlidesProp = {
   className?: string;
+  children?: ReactNode;
+  slideMobile: number;
+  slideDesktop: number;
+  amount: number;
+  currentItem: (index: number) => void;
 };
 
-function Slides({ className }: SlidesProp) {
+function Slides({ className, children, slideDesktop, slideMobile, amount, currentItem }: SlidesProp) {
   const [index, setIndex] = useState(-1);
   const [matches, setMatches] = useState<boolean>();
 
@@ -27,25 +32,29 @@ function Slides({ className }: SlidesProp) {
 
   const styleSlide = {
     container: (isScreenBased: any) => ({
-      left: isScreenBased ? `${-33 * index}vw` : `${-100 * index}vw`,
+      left: isScreenBased ? `${slideDesktop * index}vw` : `${slideMobile * index}vw`,
     }),
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const idx = matches ? 1 : 2;
+      const idx = matches ? amount-2 : amount-1;
       setIndex((oldIndex) => {
         if (oldIndex < idx) {
+          currentItem(oldIndex + 1);
           return oldIndex + 1;
         } else {
+          matches ? currentItem(-1) : currentItem (0);
           return matches ? -1 : 0;
         }
       });
     }, 7000);
 
     if (matches) {
+      currentItem(-1);
       setIndex(-1);
     } else {
+      currentItem(0);
       setIndex(0);
     }
 
@@ -57,7 +66,7 @@ function Slides({ className }: SlidesProp) {
   return (
     <div
       className={clsx(
-        "relative w-full h-64 flex items-center overflow-hidden",
+        "relative flex items-center overflow-hidden",
         className
       )}
     >
@@ -65,9 +74,7 @@ function Slides({ className }: SlidesProp) {
         className="absolute flex items-center duration-1000 slides"
         style={styleSlide.container(matches)}
       >
-        <SlideItem type="resilient" active={index === -1} className="drop-shadow"/>
-        <SlideItem type="escalate" active={index === 0} />
-        <SlideItem type="comprehensive" active={index === 1} />
+        {children}
       </div>
     </div>
   );
