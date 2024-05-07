@@ -11,8 +11,9 @@ const HomeGallery = () => {
       </h1>
       <p className="text-white text-justify font-poppins text-[21px] px-12">
         The Nextcent blog is the best place to read about the latest membership
-        insights, trends and more. See who's joining the community, read about
-        how our community are increasing their membership income and lot's more.
+        insights, trends and more. See who&apos;s joining the community, read
+        about how our community are increasing their membership income and
+        lot&apos;s more.
       </p>
       <div className="flex flex-row">
         {galleryData.map(
