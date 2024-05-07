@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const HomeGallery = () => {
   return (
-    <div className="flex flex-col w-full h-full bg-gradient-to-r from-[#142B6F] to-[#4B65B2] relative items-center overflow-hidden py-10 px-10 gap-6">
+    <div className="flex flex-col w-full h-full bg-gradient-to-r from-[#213D73] to-[#4B65B3] relative items-center overflow-hidden py-10 px-10 gap-6">
       <h1 className="text-[#FFCA00] font-bold font-poppins text-6xl">
         SPE Gallery
       </h1>

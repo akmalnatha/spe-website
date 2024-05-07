@@ -10,7 +10,7 @@ type Props = {
 
 const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
   return (
-    <div className="place-items-start w-full bg-gradient-to-r from-[#142B6F] to-[#4B65B2] relative lg:rounded-3xl md:rounded-3xl">
+    <div className="place-items-start w-full bg-gradient-to-r from-[#213D73] to-[#4B65B3]relative lg:rounded-3xl md:rounded-3xl">
       {images.map((elem, idx) => (
         <div
           key={idx}

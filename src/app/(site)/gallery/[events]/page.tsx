@@ -29,15 +29,19 @@ const EventPage = ({ params }: { params: { events: number } }) => {
   }
 
   return (
-    <div className="flex flex-col w-full h-full bg-white relative items-center overflow-hidden pt-32 pb-10 gap-11">
-      <h2 className="text-[#1F3576] font-bold text-6xl">
-        {eventGallery.title}
-      </h2>
+    <div className="flex flex-col w-full h-full bg-white relative items-center overflow-hidden pt-[76px] lg:pt-[92px] pb-[36px] gap-7 md:gap-9 lg:gap-11">
+      <div className="w-full relative overflow-hidden pt-[4%]">
+        <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-[#1F3576] font-poppins font-bold text-center relative z-[2]">
+          {eventGallery.title}
+        </h1>
+        <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-[#2F2F2F] font-poppins font-bold text-center absolute top-[2px] left-[2px] opacity-35 w-full pt-[4%]">
+          {eventGallery.title}
+        </h1>
+      </div>
       <Slides
         className="w-full h-[30vw]"
         partial
         slideDesktop={-25}
-        slidePartial={-50}
         slideMobile={-100}
         amount={eventGallery.events.length}
         currentItem={(current) => setCurrentSlide(current)}
@@ -46,7 +50,7 @@ const EventPage = ({ params }: { params: { events: number } }) => {
           <SlideItem
             type={undefined}
             active={currentSlide === -1 + idx}
-            innerClassName="w-[50vw] left-0 right-0 mx-auto h-fit px-[52px]"
+            innerClassName="w-[90%] lg:w-[50vw] h-fit lg:px-[26px]"
             parentClassName="w-screen lg:w-[50vw]"
             key={idx}
           >
@@ -54,9 +58,12 @@ const EventPage = ({ params }: { params: { events: number } }) => {
           </SlideItem>
         ))}
       </Slides>
-      <p className="w-4/5 text-white font-poppins text-2xl text-center px-12 py-8 rounded-xl bg-gradient-to-r from-[#142B6F] to-[#4B65B2]">
-        {eventGallery.desc}
-      </p>
+      <div className="px-[6.6667%]">
+
+        <p className="w-full text-white font-poppins text-[14px] sm:text-[16px] md:text-[20px] lg:text-[24px] text-justify px-[5.12820512%] py-4 lg:py-8 rounded-xl bg-gradient-to-r from-[#213D73] to-[#4B65B3]">
+          {eventGallery.desc}
+        </p>
+      </div>
     </div>
   );
 };
