@@ -1,10 +1,6 @@
 import React from "react";
-import { images } from "../../lib/constants";
-import left from "/public//left.svg";
-import right from "/public/right.svg";
+import { images } from "../../lib/home";
 import { motion } from "framer-motion";
-import { FaAngleLeft } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
 
 type Props = {
   activeImage: any;
