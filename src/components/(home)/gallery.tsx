@@ -1,6 +1,7 @@
 "use client";
 
 import galleryData from "@/lib/gallery";
+import Link from "next/link";
 
 const HomeGallery = () => {
   return (
@@ -14,9 +15,18 @@ const HomeGallery = () => {
         how our community are increasing their membership income and lot's more.
       </p>
       <div className="flex flex-row">
-        {galleryData.map((event, idx) => (
-          <div></div>
-        ))}
+        {galleryData.map(
+          (event, idx) =>
+            (event.index === 6 || event.index === 7 || event.index === 8) && (
+              <div key={idx} className="flex justify-evenly">
+                <img
+                  src={event.image}
+                  className="block w-full h-auto relative"
+                />
+                <Link href={`/gallery/${event.index}`} className=""></Link>
+              </div>
+            )
+        )}
       </div>
     </div>
   );
