@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { images } from "../../lib/constants";
+import { images } from "../../lib/home";
 import Description from "./description";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 

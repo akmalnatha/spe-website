@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  AnimatePresence,
-  motion,
-} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Slides from "@/components/(about)/slide";
 import Counter from "@/components/(about)/counter";
@@ -213,7 +210,10 @@ export default function AboutUs() {
               Our Vision
             </h2>
           </div>
-          <p className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins" data-aos="fade-left">
+          <p
+            className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins"
+            data-aos="fade-left"
+          >
             To elevate SPE UI SC as an adept organization through a cohesive
             working environment and extensive yet continuous networking while
             also cultivating the potential of its people.
@@ -231,23 +231,35 @@ export default function AboutUs() {
               Our Mission
             </h2>
           </div>
-          <p className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins" data-aos="fade-left">
+          <p
+            className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins"
+            data-aos="fade-left"
+          >
             Empower the team to be resilience within an organizational culture
             to overcome obstacles and emerge as a stronger organization, by
             creating a strong sense of belonging.
           </p>
-          <p className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins" data-aos="fade-left">
+          <p
+            className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins"
+            data-aos="fade-left"
+          >
             Escalate the quality of work programs, relationships with
             prospective stakeholders and networking opportunities to
             continuously strive for wider community.
           </p>
-          <p className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins" data-aos="fade-left">
+          <p
+            className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins"
+            data-aos="fade-left"
+          >
             Committed to provide a learning environment through a comprehensive
             oil and gas knowledge,  professional skills, competitions
             opportunities and personal development programs for career
             development across all members.
           </p>
-          <p className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins" data-aos="fade-left">
+          <p
+            className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins"
+            data-aos="fade-left"
+          >
             Comprehensively build the organization's quality from internal and
             external scope to maintain and enhance member engagement across
             diverse majors in engineering.
@@ -263,10 +275,31 @@ export default function AboutUs() {
             Our Core Values
           </h2>
         </div>
-        <Slides className="w-full h-64" slideDesktop={-33} slideMobile={-100} amount={3} currentItem={(current) => setCurrentSlide(current)}>
-          <SlideItem type="resilient" active={currentSlide === -1} innerClassName="w-60 md:w-72 lg:w-80 h-fit" parentClassName="w-screen lg:w-[33vw]"/>
-          <SlideItem type="escalate" active={currentSlide === 0} innerClassName="w-60 md:w-72 lg:w-80 h-fit" parentClassName="w-screen lg:w-[33vw]" />
-          <SlideItem type="comprehensive" active={currentSlide === 1} innerClassName="w-60 md:w-72 lg:w-80 h-fit" parentClassName="w-screen lg:w-[33vw]" />
+        <Slides
+          className="w-full h-64"
+          slideDesktop={-33}
+          slideMobile={-100}
+          amount={3}
+          currentItem={(current) => setCurrentSlide(current)}
+        >
+          <SlideItem
+            type="resilient"
+            active={currentSlide === -1}
+            innerClassName="w-60 md:w-72 lg:w-80 h-fit"
+            parentClassName="w-screen lg:w-[33vw]"
+          />
+          <SlideItem
+            type="escalate"
+            active={currentSlide === 0}
+            innerClassName="w-60 md:w-72 lg:w-80 h-fit"
+            parentClassName="w-screen lg:w-[33vw]"
+          />
+          <SlideItem
+            type="comprehensive"
+            active={currentSlide === 1}
+            innerClassName="w-60 md:w-72 lg:w-80 h-fit"
+            parentClassName="w-screen lg:w-[33vw]"
+          />
         </Slides>
         <motion.div
           key={animationKey}
@@ -341,19 +374,19 @@ export default function AboutUs() {
           </AnimatePresence>
         </motion.div>
       </div>
-      <div>
+      <div className="mb-20 mt-12">
         <Awards
-          img="/awards/presedential.png"
-          title="About Us"
+          img="/awards/image 114.svg"
+          title="Awards"
           subtitle1="Presidential Award SPE International"
           subtitle2="Outstanding Student Chapter for 2022/2023 Stewardship"
           desc1="The award recognizes the highest-ranked 10% of eligible student chapters that are exemplary in the scoring categories,"
           desc2="with other 27 SPE SCs across the world have won the 2023 Presidential Award for Outstanding Student Chapter."
-          button={true}
+          button={false}
           buttonText="Find Out More"
         />
       </div>
-      <div className="w-full bg-[#FFFFFF] pb-[2.5%]">
+      {/* <div className="w-full bg-[#FFFFFF] pb-[2.5%]">
         <div className="w-full relative overflow-hidden mb-3">
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-center text-[#1F3576] font-poppins font-bold leading-snug relative z-[2]">
             Meet <span className="text-[#FBD233]">Our</span> Team
@@ -369,7 +402,7 @@ export default function AboutUs() {
             className="object-contain"
           />
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

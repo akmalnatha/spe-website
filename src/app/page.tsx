@@ -57,7 +57,7 @@ export default function Home() {
 
         <div className="flex justify-center lg:items-end lg:justify-end pt-14 lg:pt-18 w-full lg:w-1/2">
           <img
-            src="./assets/home1.png"
+            src="/home/home1.png"
             className="w-4/5 h-auto lg:h-[92vh] lg:w-[90%] rounded-lg"
             data-aos="fade-down"
           />
