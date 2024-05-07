@@ -52,6 +52,7 @@ const EventPage = ({ params }: { params: { events: number } }) => {
             active={currentSlide === -1 + idx}
             innerClassName="w-[90%] lg:w-[50vw] h-fit lg:px-[26px]"
             parentClassName="w-screen lg:w-[50vw]"
+            key={idx}
           >
             <img src={event} alt={`Event ${index} Image ${idx}`} />
           </SlideItem>

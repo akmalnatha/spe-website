@@ -252,7 +252,7 @@ export default function AboutUs() {
             data-aos="fade-left"
           >
             Committed to provide a learning environment through a comprehensive
-            oil and gas knowledge,  professional skills, competitions
+            oil and gas knowledge, professional skills, competitions
             opportunities and personal development programs for career
             development across all members.
           </p>
@@ -260,7 +260,7 @@ export default function AboutUs() {
             className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins"
             data-aos="fade-left"
           >
-            Comprehensively build the organization's quality from internal and
+            Comprehensively build the organization&apos;s quality from internal and
             external scope to maintain and enhance member engagement across
             diverse majors in engineering.
           </p>

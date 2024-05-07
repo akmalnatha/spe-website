@@ -34,7 +34,7 @@ export default function Petromax() {
         <div className="w-full bg-white h-fit flex flex-col gap-16 mb-[36px]">
           {PetromaxData.map((item: PetromaxItem, idx: number) => {
             return(
-              <div className="bg-cover bg-no-repeat bg-center w-full overflow-hidden" style={{backgroundImage: item.image}}>
+              <div key={idx} className="bg-cover bg-no-repeat bg-center w-full overflow-hidden" style={{backgroundImage: item.image}}>
                 <div className="w-full h-full backdrop-blur-sm bg-white bg-opacity-50 py-[24px] px-[6.111%] flex flex-col lg:flex-row gap-8 lg:gap-20 items-center">
                   <img src={item.poster} alt="Magazine Cover" className="object-contain max-h-[492px]" data-aos="zoom-in"/>
                   <div className="w-full" data-aos="fade-left">
