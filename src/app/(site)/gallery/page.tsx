@@ -32,7 +32,7 @@ const GalleryPage = () => {
               <img
                 src={gallery.image}
                 alt={`Event ${gallery.index}`}
-                className="cursor-pointer"
+                className="cursor-pointer hover:shadow-xl"
               />
             </Link>
           </div>

@@ -30,17 +30,17 @@ export default function Petrodays() {
         </p>
       </div>
       <div
-        className="flex flex-col border-t-8 border-[#1F3576] pt-10 pb-8 mx-12 justify-center items-center gap-8"
+        className="flex flex-col border-t-4 md:border-t-8 border-[#1F3576] pt-10 pb-4 md:pb-8 mx-12 justify-center items-center gap-8"
         data-aos="fade-left"
       >
-        <h1 className="text-[#1F3576] text-2xl md:text-4xl lg:text-6xl font-bold font-poppins py-4">
+        <h1 className="text-[#1F3576] text-2xl md:text-4xl lg:text-6xl font-bold font-poppins md:py-4">
           Our Grand Theme
         </h1>
       </div>
       <div className="mx-0">
-        <div className="w-full flex flex-col justify-center items-center absolute top-[38%] sm:top-[26%] lg:top-[24%] gap-8">
+        <div className="w-full flex flex-col justify-center items-center relative md:absolute top-[11%] md:top-[30%] lg:top-[25%] xl:top-[23%] gap-4 xl:gap-8">
           <h1
-            className="leading-tight relative z-[2] text-center text-[#1F3576] font-poppins font-bold text-3xl w-4/5"
+            className="leading-tight relative z-[2] text-center text-[#1F3576] font-poppins font-bold text-sm lg:text-xl xl:text-3xl w-[90%] xl:w-4/5"
             data-aos="fade-right"
           >
             Embracing the Green Revolution: Renewable Energy Integration for a
@@ -48,7 +48,7 @@ export default function Petrodays() {
           </h1>
 
           <p
-            className="leading-tight relative z-[2] text-justify text-[#1F3576] font-poppins font-medium text-xl w-4/5"
+            className="leading-tight relative z-[2] text-justify text-[#1F3576] font-poppins font-medium text-sm lg:text-lg xl:text-xl w-[90%] xl:w-4/5"
             data-aos="fade-left"
           >
             signifies a pivotal shift in the oil and gas sector as it commits to
@@ -60,7 +60,7 @@ export default function Petrodays() {
 
           <Link
             href="https://linktr.ee/Petrodays2024"
-            className="w-fit bg-white text-[#142B6F] text-xl font-poppins font-medium py-2 px-10 rounded-3xl mt-4 justify-center border-[4px] border-[#FFCA00]"
+            className="w-fit bg-white hover:bg-[#142B6F] text-[#142B6F] hover:text-white text-[11px] md:text-[10px] lg:text-[16px] xl:text-xl font-poppins font-medium py-2 px-5 lg:px-10 rounded-3xl mt-4 justify-center border-[4px] border-[#FFCA00]"
             data-aos="fade-up"
           >
             Disvover more details
@@ -69,10 +69,10 @@ export default function Petrodays() {
         <img
           src="/petrodays/petrodays-bg.svg"
           alt="Background"
-          className="w-screen h-auto"
+          className="w-screen h-auto hidden md:block"
         />
       </div>
-      <div className="flex flex-col py-11 mx-12 justify-center items-center gap-8">
+      <div className="flex flex-col py-6 md:py-11 mx-12 justify-center items-center gap-8">
         <h1
           className="text-[#1F3576] text-2xl md:text-4xl lg:text-6xl font-bold font-poppins py-4"
           data-aos="fade-down"

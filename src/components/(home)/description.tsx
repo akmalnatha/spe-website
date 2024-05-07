@@ -10,13 +10,13 @@ type Props = {
 
 const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
   return (
-    <div className="place-items-start w-full bg-gradient-to-r from-[#213D73] to-[#4B65B3] relative lg:rounded-3xl md:rounded-3xl">
+    <div className="place-items-start w-4/5 mx-auto md:w-full bg-gradient-to-r from-[#213D73] to-[#4B65B3] relative lg:rounded-3xl md:rounded-3xl lg:pb-10 xl:pb-2 pt-10 px-10">
       {images.map((elem, idx) => (
         <div
           key={idx}
           className={`${
             idx === activeImage
-              ? "block w-full h-full pt-8 lg:pt-8 pb-5 lg:pb-3 px-10 text-left"
+              ? "block w-full h-full text-left"
               : "hidden"
           }`}
         >
@@ -36,10 +36,10 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
             }}
             className="w-full"
           >
-            <div className="md:text-xl lg:text-[46px] font-bold text-[#FFCA00] font-poppins text-center">
+            <div className="text-xl md:text-xl lg:text-[46px] font-bold text-[#FFCA00] font-poppins text-center">
               {elem.title}
             </div>
-            <div className="text-[11px] md:text-[12px] lg:text-[20px] font-poppins h-60 md:h-40 text-justify text-white mt-4 lg:mt-8">
+            <div className="text-[11px] lg:text-[20px] font-poppins h-60 md:h-40 text-justify text-white mt-4 lg:mt-8">
               {" "}
               {elem.desc}
             </div>
