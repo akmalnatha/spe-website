@@ -31,7 +31,7 @@ const Awards = ({
 
   return (
     <div className="flex flex-col lg:flex-row items-center bg-white">
-      <div className="flex flex-col w-4/5 md:w-1/2 h-fit justify-center items-center">
+      <div className="flex flex-col w-4/5 lg:w-1/2 h-fit justify-center items-center">
         <img src={img} className="w-full h-full" data-aos="fade-right"></img>
         {button && (
           <Link
@@ -43,7 +43,7 @@ const Awards = ({
         )}
       </div>
       <div
-        className="w-4/5 md:w-1/2 bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37] h-auto px-12 pt-7 md:pt-16 pb-12 md:pb-32 mt-10 md:mt-0 text-[#1F3576]"
+        className="w-4/5 lg:w-1/2 bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37] h-auto px-12 pt-7 md:pt-16 pb-12 md:pb-32 mt-10 lg:mt-0 text-[#1F3576]"
         data-aos="fade-left"
       >
         <h1 className="text-4xl md:text-6xl font-bold font-poppins text-center">

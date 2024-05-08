@@ -39,7 +39,7 @@ const Description = ({ activeImage, clickNext, clickPrev }: Props) => {
             <div className="text-xl md:text-xl lg:text-[46px] font-bold text-[#FFCA00] font-poppins text-center">
               {elem.title}
             </div>
-            <div className="text-[11px] lg:text-[20px] font-poppins h-60 md:h-40 text-justify text-white mt-4 lg:mt-8">
+            <div className="text-[11px] md:text-[14px] lg:text-[20px] font-poppins h-60 md:h-40 text-justify text-white mt-4 lg:mt-8">
               {" "}
               {elem.desc}
             </div>
