@@ -10,7 +10,7 @@ export default function SpeEnergized() {
   });
 
   return (
-    <div className="flex flex-col w-full h-fit overflow-hidden pt-[76px] lg:pt-[92px]">
+    <div className="bg-white flex flex-col w-full h-fit overflow-hidden pt-[76px] lg:pt-[92px]">
       <div className="flex flex-col">
         <h1
           className="w-full h-[34vw] sm:h-[26vw] xl:h-[18vw] text-white font-bold font-poppins text-center justify-center items-center text-4xl md:text-6xl lg:text-9xl py-12 md:py-20 lg:px-auto bg-no-repeat bg-center bg-cover"
