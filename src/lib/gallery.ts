@@ -72,7 +72,7 @@ const galleryData: galleryItem[] = [
     image: "/gallery/field trip.png",
     events: ["Event5", "Event6"],
     title: "Field Trip",
-    desc: "Lorem ipsum dolor sit amet kontol memek",
+    desc: "Lorem ipsum dolor sit ",
   },
   {
     index: 7,
@@ -85,7 +85,7 @@ const galleryData: galleryItem[] = [
     index: 8,
     image: "/gallery/spe one.png",
     events: ["Event5", "Event6"],
-    title: "Spe One",
+    title: "Spe First",
     desc: "",
   },
   {
