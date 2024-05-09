@@ -15,7 +15,7 @@ export default function AboutUs() {
     "SPE is an international non-profit organization that provides unparalalled insights, shared expertise, and life-long learning to fuel the success of our members and the future of the oil and gas industry.",
   ]); // Define your description here
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(-1);
   const [animationKey, setAnimationKey] = useState(0);
   const [isMobile, setIsMobile] = useState<boolean>();
 
@@ -134,7 +134,7 @@ export default function AboutUs() {
       </motion.div>
       <div className="w-full bg-[#FFFFFF] pt-[1.3%] pb-[2.5%]">
         <div className="w-full relative overflow-hidden mb-4">
-          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-[#1F3576] font-poppins font-bold text-center relative z-[2]">
+          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:px] text-[#1F3576] font-poppins font-bold text-center relative z-[2]">
             Who <span className="text-[#FBD233]">We</span> Are
           </h2>
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-[#2F2F2F] font-poppins font-bold text-center absolute top-[2px] left-[2px] opacity-35 w-full">
@@ -260,8 +260,8 @@ export default function AboutUs() {
             className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins"
             data-aos="fade-left"
           >
-            Comprehensively build the organization&apos;s quality from internal and
-            external scope to maintain and enhance member engagement across
+            Comprehensively build the organization&apos;s quality from internal
+            and external scope to maintain and enhance member engagement across
             diverse majors in engineering.
           </p>
         </div>
@@ -301,7 +301,7 @@ export default function AboutUs() {
             parentClassName="w-screen lg:w-[33vw]"
           />
         </Slides>
-        <motion.div
+        {/* <motion.div
           key={animationKey}
           variants={{
             hidden: {
@@ -372,18 +372,71 @@ export default function AboutUs() {
               {description[currentIndex]}
             </motion.div>
           </AnimatePresence>
-        </motion.div>
+        </motion.div> */}
+        <div
+          className={`w-full h-auto mx-auto bg-gradient-to-r flex flex-col justify-start gap-2 md:gap-5 lg:justify-between items-center p-[3%] md:p-[2%] lg:mt-7 md:flex-row from-[#4B65B3] to-[#213D73]`}
+        >
+          <div className="text-center text-[20px] md:text-[28px] lg:text-[36px] xl:text-[44px] text-[#FBD233] font-poppins font-bold relative" data-aos="fade-right">
+            <h3 className="relative z-[2]">Resilient</h3>
+            <h3 className="absolute text-center text-[#2F2F2F] top-[2px] left-[2px] opacity-35 w-full">
+              Resilient
+            </h3>
+          </div>
+          <div className="w-full lg:w-[75%] text-justify text-[14px] md:text-[16px] lg:text-[20px] text-white font-poppins relative" data-aos="fade-left">
+              SPE is an international non-profit organization that provides unparalalled insights, shared expertise, and life-long learning to fuel the success of our members and the future of the oil and gas industry.
+          </div>
+        </div>
+        <div
+          className={`w-full h-auto mx-auto bg-gradient-to-r flex flex-col justify-start gap-2 md:gap-5 lg:justify-between items-center p-[3%] md:p-[2%] lg:mt-7 md:flex-row-reverse from-[#213D73] to-[#4B65B3]`}
+        >
+          <div className="text-center text-[20px] md:text-[28px] lg:text-[36px] xl:text-[44px] text-[#FBD233] font-poppins font-bold relative" data-aos="fade-left">
+            <h3 className="relative z-[2]">Escalate</h3>
+            <h3 className="absolute text-center text-[#2F2F2F] top-[2px] left-[2px] opacity-35 w-full">
+              Escalate
+            </h3>
+          </div>
+          <div className="w-full lg:w-[75%] text-justify text-[14px] md:text-[16px] lg:text-[20px] text-white font-poppins relative" data-aos="fade-right">
+              SPE is an international non-profit organization that provides unparalalled insights, shared expertise, and life-long learning to fuel the success of our members and the future of the oil and gas industry.
+          </div>
+        </div>
+        <div
+          className={`w-full h-auto mx-auto bg-gradient-to-r flex flex-col justify-start gap-2 md:gap-5 lg:justify-between items-center p-[3%] md:p-[2%] lg:mt-7 md:flex-row from-[#4B65B3] to-[#213D73]`}
+        >
+          <div className="text-center text-[20px] md:text-[28px] lg:text-[36px] xl:text-[44px] text-[#FBD233] font-poppins font-bold relative" data-aos="fade-right">
+            <h3 className="relative z-[2]">Comprehensive</h3>
+            <h3 className="absolute text-center text-[#2F2F2F] top-[2px] left-[2px] opacity-35 w-full">
+              Comprehensive
+            </h3>
+          </div>
+          <div className="w-full lg:w-[75%] text-justify text-[14px] md:text-[16px] lg:text-[20px] text-white font-poppins relative" data-aos="fade-left">
+              SPE is an international non-profit organization that provides unparalalled insights, shared expertise, and life-long learning to fuel the success of our members and the future of the oil and gas industry.
+          </div>
+        </div>
       </div>
-      <div className="mb-20 mt-12">
+      <div className="bg-white py-[6.875%]">
         <Awards
           img="/awards/image 114.svg"
           title="Awards"
           subtitle1="Presidential Award SPE International"
-          subtitle2="Outstanding Student Chapter for 2022/2023 Stewardship"
-          desc1="The award recognizes the highest-ranked 10% of eligible student chapters that are exemplary in the scoring categories,"
-          desc2="with other 27 SPE SCs across the world have won the 2023 Presidential Award for Outstanding Student Chapter."
-          button={false}
-          buttonText="Find Out More"
+          subtitle2={
+            <h2 className="text-[14px] md:text-[16px] lg:text-[20px] text-center md:text-start font-regular font-poppins mt-2 md:mt-0">
+              Outstanding Student Chapter for 2022/2023{" "}
+              <span className="italic">Stewardship</span>
+            </h2>
+          }
+          desc1={
+            <p className="text-[14px] md:text-[16px] lg:text-[20px] font-poppins mt-10 text-justify">
+              The award recognizes the{" "}
+              <span className="font-bold">highest-ranked 10%</span> of eligible
+              student chapters that are exemplary in the scoring categories,
+            </p>
+          }
+          desc2={
+            <p className="text-[14px] md:text-[16px] lg:text-[20px] font-poppins mt-4 text-justify">
+              with other 27 SPE SCs across the world have won the 2023
+              Presidential Award for Outstanding Student Chapter.
+            </p>
+          }
         />
       </div>
       {/* <div className="w-full bg-[#FFFFFF] pb-[2.5%]">
