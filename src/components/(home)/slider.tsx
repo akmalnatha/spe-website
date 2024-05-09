@@ -3,64 +3,65 @@
 import { useEffect, useState } from "react";
 import { images } from "../../lib/home";
 import Description from "./description";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Slider = () => {
   const [activeImage, setActiveImage] = useState(0);
+  const [transition, setTransition] = useState(0);
 
   const clickNext = () => {
-    activeImage === images.length - 1
-      ? setActiveImage(0)
-      : setActiveImage(activeImage + 1);
+    setActiveImage(activeImage === images.length - 1 ? 0 : activeImage + 1);
+    setTransition(1);
   };
   const clickPrev = () => {
-    activeImage === 0
-      ? setActiveImage(images.length - 1)
-      : setActiveImage(activeImage - 1);
+    setActiveImage(activeImage === 0 ? images.length - 1 : activeImage - 1);
+    setTransition(0);
   };
 
   useEffect(() => {
     const timer = setTimeout(() => {
       clickNext();
-    }, 30000);
+    }, 10000);
     return () => {
       clearTimeout(timer);
     };
   }, [activeImage]);
 
   return (
-    <main className="flex flex-col place-items-center gap-8 mx-auto w-full">
+    <main className="flex flex-col place-items-center gap-8 w-full">
       <div
-        className={`w-full flex flex-row justify-center items-center transition-transform ease-in-out duration-500 p-6`}
+        className={`w-full relative flex flex-row justify-center items-center transition-transform ease-in-out duration-500`}
       >
         <div
-          className="cursor-pointer text-[18px] md:text-[24px] mr-[40px] text-black bg-[#4C66B3] rounded-full p-2 md:p-5 hover:shadow-2xl"
+          className="absolute z-[2] lg:static top-0 bottom-0 left-2 my-auto w-fit h-fit p-1 md:p-2 lg:p-4 cursor-pointer text-[24px] md:text-[28px] lg:text-[32px] flex justify-center items-center text-black bg-[#4C66B3] bg-opacity-70 hover:bg-opacity-100 rounded-full"
           onClick={clickPrev}
         >
-          <FaAngleLeft />
+          <IoIosArrowBack />
         </div>
 
-        {images.map((elem, idx) => (
-          <div
-            key={idx}
-            className={`${
-              idx === activeImage
-                ? "block object-cover transition-all duration-500 ease-in-out"
-                : "hidden"
-            }`}
-          >
-            <img
-              src={elem.src}
-              className="w-full md:w-[648.7px] h-auto md:h-[388.55px] object-cover"
-            />
-          </div>
-        ))}
+        <div className="w-full flex overflow-hidden">
+          {images.map((elem, idx) => (
+            <div
+              key={idx}
+              className={`${
+                idx === activeImage
+                  ? `w-full transition-transform duration-200 ease-in-out transform translate-x-0 `
+                  : `w-0 ${transition == 1 ? "translate-x-[1000%]" : "-translate-x-full"}`
+              }`}
+            >
+              <img
+                src={elem.src}
+                className="w-full lg:w-[648px] h-[388px] object-cover"
+              />
+            </div>
+          ))}
+        </div>
 
         <div
-          className="cursor-pointer text-[18px] md:text-[24px] ml-[40px] text-black bg-[#4C66B3] rounded-full p-2 md:p-5 hover:shadow-2xl"
+          className="absolute z-[2] lg:static top-0 bottom-0 right-2 my-auto w-fit h-fit p-1 md:p-2 lg:p-4 cursor-pointer text-[24px] md:text-[28px] lg:text-[32px] flex justify-center items-center text-black bg-[#4C66B3] bg-opacity-70 hover:bg-opacity-100 rounded-full"
           onClick={clickNext}
         >
-          <FaAngleRight />
+          <IoIosArrowForward />
         </div>
       </div>
       <div className="w-full md:w-4/5 h-full">
