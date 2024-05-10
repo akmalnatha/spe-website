@@ -35,10 +35,10 @@ function Button({
       onSubmit={onSubmit}
       className={`${
         shape == "normal"
-          ? `${color == "hollow" || "secondary" ? "px-[10px] md:px-[22px] lg:px-[30px] py-[10px]" : "px-3 md:px-6 lg:px-8 py-3"} rounded-[12px] font-medium font-redHatDisplay text-[16px] md:text-[20px] lg:text-[24px]`
+          ? `${color == "hollow" || "secondary" ? "px-4 md:px-7 lg:px-9 py-[8px]" : "px-5 md:px-8 lg:px-10 py-[10px]"} rounded-[12px] font-medium font-redHatDisplay text-[16px] md:text-[20px] lg:text-[24px]`
           : shape == "rounded-medium"
-            ? "px-3 md:px-6 lg:px-8 py-3 rounded-full font-medium text-[16px] md:text-[20px] lg:text-[24px]"
-            : "px-3 md:px-4 lg:px-6 py-[6px] rounded-full font-medium text-[14px] md:text-[16px] lg:text-[20px]"
+            ? "px-5 md:px-8 lg:px-10 py-2 rounded-full font-medium text-[16px] md:text-[20px] lg:text-[24px]"
+            : "px-5 md:px-7 lg:px-9 py-[6px] rounded-full font-medium text-[14px] md:text-[16px] lg:text-[20px]"
       } ${
         disable
           ? `cursor-not-allowed border-gray-subtext border-4`

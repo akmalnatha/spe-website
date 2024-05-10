@@ -127,6 +127,7 @@ function Navbar() {
           className={"w-14 lg:w-16"}
           src={"/assets/SPE_UI_SC.png"}
           alt="SPE UI SC"
+          loading="lazy"
         />
       </Link>
 

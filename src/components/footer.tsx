@@ -11,6 +11,7 @@ function Footer() {
             <img
               src="/assets/SPE_UI_SC.png"
               alt="Logo SPE"
+              loading="lazy"
               className="w-2/3 sm:w-1/2 lg:w-fit h-fit lg:h-[168px] max-h-[168px] object-contain mx-auto"
             />
           </div>
