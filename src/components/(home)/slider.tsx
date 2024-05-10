@@ -39,19 +39,23 @@ const Slider = () => {
           <IoIosArrowBack />
         </div>
 
-        <div className="w-full flex overflow-hidden">
+        <div className="w-full flex justify-center items-center mx-auto overflow-hidden">
           {images.map((elem, idx) => (
             <div
               key={idx}
               className={`${
                 idx === activeImage
                   ? `w-full transition-transform duration-200 ease-in-out transform translate-x-0 `
-                  : `w-0 ${transition == 1 ? "translate-x-[1000%]" : "-translate-x-full"}`
+                  : `w-0 ${
+                      transition == 1
+                        ? "translate-x-[1000%]"
+                        : "-translate-x-full"
+                    }`
               }`}
             >
               <img
                 src={elem.src}
-                className="w-full lg:w-[648px] h-[388px] object-cover"
+                className="w-full lg:w-[648px] h-[388px] object-cover mx-auto"
               />
             </div>
           ))}
