@@ -60,7 +60,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} ${leagueSpartan.variable} ${lato.variable} ${plusJakartaSans.variable} bg-white`}>
         <Navbar />
-        {children}
+        <main className="h-full min-h-screen w-full bg-inherit">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
