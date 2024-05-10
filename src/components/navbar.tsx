@@ -215,7 +215,7 @@ function Navbar() {
               <Link
                 href="/publication/petromax"
                 className={`${
-                  active == 3
+                  active == 4.1
                     ? "font-extrabold text-[#1F3576]"
                     : "font-medium text-black"
                 } text-[14px] md:text-[16px] lg:text-[20px] hover:font-extrabold truncate`}
@@ -225,7 +225,7 @@ function Navbar() {
               <Link
                 href="/publication/spe-energized"
                 className={`${
-                  active == 3
+                  active == 4.2
                     ? "font-extrabold text-[#1F3576]"
                     : "font-medium text-black"
                 } text-[14px] md:text-[16px] lg:text-[20px] hover:font-extrabold truncate`}

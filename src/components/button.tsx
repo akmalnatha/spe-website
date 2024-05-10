@@ -35,21 +35,21 @@ function Button({
       onSubmit={onSubmit}
       className={`${
         shape == "normal"
-          ? `${color == "hollow" || "secondary" ? "px-[10px] md:px-[22px] lg:px-[30px] py-[10px]" : "px-3 md:px-6 lg:px-8 py-3"} rounded-[12px] font-medium font-redHatDisplay text-[12px] md:text-[16px] lg:text-[20px]`
+          ? `${color == "hollow" || "secondary" ? "px-[10px] md:px-[22px] lg:px-[30px] py-[10px]" : "px-3 md:px-6 lg:px-8 py-3"} rounded-[12px] font-medium font-redHatDisplay text-[16px] md:text-[20px] lg:text-[24px]`
           : shape == "rounded-medium"
-            ? "px-3 md:px-6 lg:px-8 py-3 rounded-full font-medium text-[14px] md:text-[18px] lg:text-[22px]"
-            : "px-3 md:px-4 lg:px-6 py-[6px] rounded-full font-medium text-[12px] md:text-[14px] lg:text-[16px]"
+            ? "px-3 md:px-6 lg:px-8 py-3 rounded-full font-medium text-[16px] md:text-[20px] lg:text-[24px]"
+            : "px-3 md:px-4 lg:px-6 py-[6px] rounded-full font-medium text-[14px] md:text-[16px] lg:text-[20px]"
       } ${
         disable
-          ? `cursor-not-allowed border-gray-subtext border-2`
+          ? `cursor-not-allowed border-gray-subtext border-4`
           : color == "primary"
-            ? "bg-black active:bg-black hover:bg-[#232323] border-black active:border-black hover:border-[#232323] border-2"
+            ? "bg-black active:bg-[#1F3576] hover:bg-[#193996] border-[#1F3576] active:border-[#1F3576] hover:border-[#193996] border-4"
             : color == "secondary"
-              ? "bg-[#FDD001] active:bg-[#FDD001] hover:bg-[#FFD823] border-[#FDD001] active:border-[#FDD001] hover:border-[#FFD823] border-2"
+              ? "bg-[#FDD001] active:bg-[#FDD001] hover:bg-[#FFD823] border-[#FDD001] active:border-[#FDD001] hover:border-[#FFD823] border-4"
               : color == "green"
-                ? "bg-green-secondary active:bg-green-secondary hover:bg-green-accent border-green-secondary active:border-green-secondary hover:border-green-accent border-2"
+                ? "bg-green-secondary active:bg-green-secondary hover:bg-green-accent border-green-secondary active:border-green-secondary hover:border-green-accent border-4"
                 : color == "red"
-                  ? "bg-red-secondary active:bg-red-secondary hover:bg-red-accent border-red-secondary active:border-red-secondary hover:border-red-accent border-2"
+                  ? "bg-red-secondary active:bg-red-secondary hover:bg-red-accent border-red-secondary active:border-red-secondary hover:border-red-accent border-4"
                   : "bg-transparent border-[#FFCA00] hover:bg-[#142B6F] active:bg-[#0F2464] hover:text-white text-[#142B6F] border-4"
       } ${fitContent ? "w-fit shrink-0" : "w-full"} h-fit group`}
     >
@@ -87,7 +87,7 @@ function Button({
             disable ? "text-gray-500" : color == "hollow" ? "hover:text-white" : textClass ? textClass : "text-white"
           } ${
             iconPosition == "right" ? "" : "flex-row-reverse"
-          } ${icon == undefined ? "" : "flex items-center justify-center gap-3"}`}
+          } ${icon == undefined ? "" : "flex items-center justify-center gap-3"} truncate`}
         >
           {text}
           <div
