@@ -50,7 +50,7 @@ function Button({
                 ? "bg-green-secondary active:bg-green-secondary hover:bg-green-accent border-green-secondary active:border-green-secondary hover:border-green-accent border-4"
                 : color == "red"
                   ? "bg-red-secondary active:bg-red-secondary hover:bg-red-accent border-red-secondary active:border-red-secondary hover:border-red-accent border-4"
-                  : "bg-transparent border-[#FFCA00] hover:bg-[#142B6F] active:bg-[#0F2464] hover:text-white text-[#142B6F] border-4"
+                  : "bg-white border-[#FFCA00] hover:bg-[#142B6F] active:bg-[#0F2464] hover:text-white text-[#142B6F] border-4"
       } ${fitContent ? "w-fit shrink-0" : "w-full"} h-fit group`}
     >
       {isLoading ? (
