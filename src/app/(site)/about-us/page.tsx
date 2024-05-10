@@ -260,8 +260,8 @@ export default function AboutUs() {
             className="p-3 md:p-5 lg:p-7 rounded-xl bg-white text-[16px] md:text-[20px] lg:text-[24px] text-[#142B6F] text-justify font-poppins"
             data-aos="fade-left"
           >
-            Comprehensively build the organization&apos;s quality from internal and
-            external scope to maintain and enhance member engagement across
+            Comprehensively build the organization&apos;s quality from internal
+            and external scope to maintain and enhance member engagement across
             diverse majors in engineering.
           </p>
         </div>
@@ -374,7 +374,7 @@ export default function AboutUs() {
           </AnimatePresence>
         </motion.div>
       </div>
-      <div className="mb-20 mt-12">
+      <div className="mb-20 mt-12 bg-white">
         <Awards
           img="/awards/image 114.svg"
           title="Awards"
