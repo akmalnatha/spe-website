@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 export default function Petrodays() {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1500 });
   });
 
   return (
@@ -16,6 +16,7 @@ export default function Petrodays() {
         <img
           src="/petrodays/Petrodays.svg"
           className="flex justify-center items-center mx-auto"
+          loading="lazy"
           data-aos="fade-down"
         />
         <p
@@ -70,6 +71,7 @@ export default function Petrodays() {
           src="/petrodays/petrodays-bg.svg"
           alt="Background"
           className="w-screen h-auto hidden md:block"
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col py-6 md:py-11 mx-12 justify-center items-center gap-8">

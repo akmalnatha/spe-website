@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import galleryData from "@/lib/gallery";
-import Slides from "@/components/(about)/slide";
-import SlideItem from "@/components/(about)/slide-item";
+import Slides from "@/components/slide";
+import SlideItem from "@/components/slide-item";
 
 const EventPage = ({ params }: { params: { events: number } }) => {
   const index = params.events;
@@ -54,7 +54,7 @@ const EventPage = ({ params }: { params: { events: number } }) => {
             parentClassName="w-screen lg:w-[50vw]"
             key={idx}
           >
-            <img src={event} alt={`Event ${index} Image ${idx}`} />
+            <img src={event} alt={`Event ${index} Image ${idx}`} loading="lazy"/>
           </SlideItem>
         ))}
       </Slides>

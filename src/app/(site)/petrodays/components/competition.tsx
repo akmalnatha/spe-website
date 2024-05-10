@@ -6,7 +6,7 @@ import AOS from "aos";
 
 const Competition = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1500 });
   });
 
   return (
@@ -25,7 +25,7 @@ const Competition = () => {
               className="flex flex-col md:flex-row gap-8 px-auto md:px-6"
               data-aos="fade-left"
             >
-              <img src={elem.src} className="md:w-1/2 h-auto" />
+              <img src={elem.src} className="md:w-1/2 h-auto" loading="lazy"/>
               <p className="md:w-1/2 text-[white] text-justify font-poppins text-sm lg:text-xl">
                 {elem.desc}
               </p>

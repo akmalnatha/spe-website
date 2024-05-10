@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 const GalleryPage = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1500 });
   });
 
   return (
@@ -36,6 +36,7 @@ const GalleryPage = () => {
                 src={gallery.image}
                 alt={`Event ${gallery.index}`}
                 className="cursor-pointer hover:shadow-2xl hover:shadow-[#FBD233]"
+                loading="lazy"
               />
             </Link>
           </div>
