@@ -10,7 +10,7 @@ export default function Petromax() {
     window.open(link, "_blank");
   };
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1500 });
   });
   return (
     <>
@@ -36,7 +36,8 @@ export default function Petromax() {
             return(
               <div key={idx} className="bg-cover bg-no-repeat bg-center w-full overflow-hidden" style={{backgroundImage: item.image}}>
                 <div className="w-full h-full backdrop-blur-sm bg-white bg-opacity-50 py-[24px] px-[6.111%] flex flex-col lg:flex-row gap-8 lg:gap-20 items-center">
-                  <img src={item.poster} alt="Magazine Cover" className="object-contain max-h-[492px]" data-aos="zoom-in"/>
+                  <div></div>
+                  <img src={item.poster} alt="Magazine Cover" className="object-contain max-h-[492px]" data-aos="zoom-in" loading="lazy"/>
                   <div className="w-full" data-aos="fade-left">
                     <div className="w-full relative overflow-hidden mb-2">
                       <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-[#1F3576] font-poppins font-bold text-center relative z-[2]">
