@@ -19,11 +19,11 @@ function SlideItem({ parentClassName, innerClassName, type, children, active }: 
       >
         <div className={clsx("duration-1000",!active && "opacity-100 lg:opacity-20")}>
           {type === "resilient"
-            ? <img src="/assets/core_resilient.png" alt="" />
+            ? <img src="/about/core_resilient.png" alt="" loading="lazy"/>
             : type === "escalate"
-            ? <img src="/assets/core_escalate.png" alt="" />
+            ? <img src="/about/core_escalate.png" alt="" loading="lazy"/>
             : type === "comprehensive" 
-            ? <img src="/assets/core_comprehensive.png" alt="" />
+            ? <img src="/about/core_comprehensive.png" alt="" loading="lazy"/>
             : children
           }
         </div>

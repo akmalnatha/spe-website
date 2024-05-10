@@ -24,19 +24,19 @@ const Awards = ({
   button = false
 }: awardProp) => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1500 });
   });
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 items-center h-fit bg-white">
-      <div className="flex flex-col w-4/5 lg:w-1/2 justify-center items-center">
-        <img src={img} className="w-full h-full" data-aos="fade-right"></img>
+    <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-4 lg:gap-0 items-center h-auto bg-white">
+      <div className="flex flex-col w-4/5 lg:w-full justify-center items-center">
+        <img src={img} className="w-full" data-aos="fade-right" loading="lazy"></img>
         {button && (
           <Button type={"button"} color="hollow" fitContent shape="rounded-small" text="Find Out More"/>
         )}
       </div>
       <div
-        className="w-full lg:w-1/2 bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37] px-[2.5%] py-8 lg:py-16 text-[#1F3576]"
+        className="w-full place-self-stretch bg-gradient-to-b from-[#FBE291] via-[#FAD431] to-[#FCCF37] px-[2.5%] py-8 lg:py-16 text-[#1F3576]"
         data-aos="fade-left"
       >
         <div className="w-full relative overflow-hidden mb-4">
