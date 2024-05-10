@@ -1,6 +1,6 @@
 "use client";
 
-import Article from "./components/article";
+import Article from "../../../../components/(spe-energized)/article";
 import AOS from "aos";
 import { useEffect } from "react";
 
