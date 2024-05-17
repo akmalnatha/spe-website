@@ -13,7 +13,7 @@ export interface PetromaxItem {
       title: "PETROMAX Vol.13",
       image: "url('/petromax/petromax_13.png')",
       poster: "/petromax/poster_13.png",
-      description: "We proudly brought up theme 'Humankind' as our main issue which covering: - An exclusive talks with Adam Alfares, Co-Founder of Menjadi Manusia - An insightful interview with Nurania Saubryani (ChE'13), a Facilities Surveillance Engineer at ExxonMobil - Remarkable opinions from the President of SPE ITS SC, SPE UGM SC, and SPE Undip SC - Oil price collapses to the lowest level for 18 years - Special tips during quarantine and many more.",
+      description: "halo aku anggota spe ui sc",
       link: "https://issuu.com/speuisc/docs/output"
     },
     {
@@ -63,6 +63,13 @@ export interface PetromaxItem {
       image: "url('/petromax/petromax_20.png')",
       poster: "/petromax/poster_20.png",
       description: "Proudly unveils 'Shaping Mankind,' an insightful exploration into the profound impact of the energy industry on human progress. Exclusive interviews feature leaders like the Executive Director of Reservoir Link Group, Sr. External Relations Advisor, and Project Manager of Clean Affordable and Secure Energy (CASE) at IESR, and many more!",
+      link: "https://bit.ly/PetromaxVolume20"
+    },
+    {
+      title: "PETROMAX Vol.21",
+      image: "url('/petromax/petromax_20.png')",
+      poster: "/petromax/poster_21.png",
+      description: "petromax 21",
       link: "https://bit.ly/PetromaxVolume20"
     },
   ];

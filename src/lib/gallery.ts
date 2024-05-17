@@ -17,6 +17,7 @@ const galleryData: galleryItem[] = [
       "/gallery/SCDW/Screenshot (548).png",
       "/gallery/SCDW/Screenshot (549).png",
       "/gallery/SCDW/Screenshot (550).png",
+      "/gallery/SCDW/Screenshot (550).png",
     ],
     title: "SCDW",
     desc: "A platform for members to delve into basic oil and gas knowledge covering three primary topics in oil and gas: Geology, Drilling, and Production, along with an additional topic presented by professionals from collaborating companies.",
